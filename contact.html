@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Contact - Portfolio</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
 </head>
 <body>
     <header>
@@ -21,24 +22,36 @@
 
     <section id="contact" class="contact">
         <h2>Contact</h2>
-        <div class="contact-info">
-            <p><strong>Email:</strong> <a href="mailto:amshumangajula18@gmail.com">amshumangajula18@gmail.com</a></p>
-            <p><strong>Phone:</strong> <a href="tel:+918341390391">+91 8341390391</a></p>
-            <p>
-                <strong>LinkedIn:</strong>
-                <a href="https://www.linkedin.com/in/amshuman-gajula-884479241/" target="_blank">Visit My LinkedIn Profile</a>
-            </p>
-        </div>
-        <form action="#">
+        <form id="contact-form">
             <label for="name">Name</label>
-            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
             <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Your Email" required>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
             <label for="message">Message</label>
-            <textarea id="message" placeholder="Your Message" required></textarea>
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
             <input type="submit" value="Send Message">
         </form>
     </section>
 
+    <script type="text/javascript">
+        // Initialize EmailJS with your public key
+        emailjs.init("xJHOWMoydMXmvkpW_");  // Replace with your actual public key
+
+        // Add event listener to form submission
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault();  // Prevent form from refreshing the page
+            
+            var form = event.target;
+            
+            // Send the email using EmailJS with the template ID you created
+            emailjs.sendForm("service_pewutch", "template_y2afi4x", form)
+                .then(function(response) {
+                    alert("Message sent successfully!");
+                    form.reset();  // Reset the form after sending the message
+                }, function(error) {
+                    alert("Failed to send message. Please try again later.");
+                });
+        });
+    </script>
 </body>
 </html>
