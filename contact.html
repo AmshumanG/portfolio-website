@@ -25,20 +25,20 @@
         <form id="contact-form">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" placeholder="Your Name" required>
-
+            
             <label for="email">Email</label>
             <input type="email" id="email" name="email" placeholder="Your Email" required>
-
+            
             <label for="message">Message</label>
             <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-
+            
             <input type="submit" value="Send Message">
         </form>
     </section>
 
     <script type="text/javascript">
         // Initialize EmailJS with your public key
-        emailjs.init("xJHOWMoydMXmvkpW_");  // Replace with your actual public key
+        emailjs.init("xJHOWMoydMXmvkpW_");  // Use your actual public key
 
         // Add event listener to form submission
         document.getElementById("contact-form").addEventListener("submit", function(event) {
@@ -51,5 +51,13 @@
                 .then(function(response) {
                     alert("Message sent successfully!");
                     form.reset();  // Reset the form after sending the message
-                },
+                }, function(error) {
+                    alert("Failed to send message. Please try again later.");
+                    console.error("Error sending email:", error);
+                });
+        });
+    </script>
+</body>
+</html>
+
 
