@@ -248,3 +248,57 @@ footer {
         height: 2.5rem;
     }
 }
+
+/* Hire Me Section Styling */
+.hire-me {
+    text-align: center;
+    margin: 4rem 0;
+    padding: 2rem 0;
+    background-color: #222; /* Dark background for contrast */
+    border-radius: 10px;
+}
+
+.hire-me h2 {
+    font-size: 2.8rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.hire-me p {
+    font-size: 1.6rem;
+    color: #ccc;
+    margin-bottom: 2rem;
+}
+
+.hire-btn {
+    display: inline-block;
+    font-size: 1.8rem;
+    color: white;
+    background-color: #b74b4b;
+    padding: 1rem 2.5rem;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.hire-btn:hover {
+    background-color: #922c2c; /* Darker red on hover */
+    transform: translateY(-3px); /* Adds a lift effect */
+    box-shadow: 0 6px 15px rgba(183, 75, 75, 0.6);
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    .hire-me h2 {
+        font-size: 2.4rem;
+    }
+    .hire-me p {
+        font-size: 1.4rem;
+    }
+    .hire-btn {
+        font-size: 1.6rem;
+        padding: 0.8rem 2rem;
+    }
+}
