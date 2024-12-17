@@ -302,3 +302,77 @@ footer {
         padding: 0.8rem 2rem;
     }
 }
+/* Contact Section Styling */
+.contact {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: #222; /* Dark background */
+    color: white;
+    border-radius: 10px;
+}
+
+.contact h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #b74b4b;
+}
+
+.contact-info {
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+    line-height: 2.5rem;
+}
+
+.contact-info a {
+    color: #b74b4b;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+    color: #ff6f61; /* Lighter red on hover */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+form label {
+    font-size: 1.6rem;
+    color: #ccc;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 1rem;
+    border: 2px solid #b74b4b;
+    background-color: #333;
+    color: white;
+    font-size: 1.4rem;
+    border-radius: 5px;
+}
+
+form textarea {
+    resize: none;
+    height: 120px;
+}
+
+form input[type="submit"] {
+    background-color: #b74b4b;
+    color: white;
+    font-size: 1.6rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #922c2c;
+    transform: translateY(-3px);
+}
