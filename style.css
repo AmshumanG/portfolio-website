@@ -35,7 +35,6 @@ header {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    transition: top 0.3s;
 }
 
 .logo {
@@ -151,8 +150,8 @@ nav a.active {
         justify-content: center;
     }
 }
-
-/* Hidden header style */
-header.hidden {
-    top: -100px; /* Adjust this value to match the height of your header */
+.hire{
+    font-size: medium;
+    color: #b74b4b;
 }
+
