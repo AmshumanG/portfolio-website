@@ -1,7 +1,7 @@
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
-/* General Styles */
+/* Reset some default browser styles */
 * {
     margin: 0;
     padding: 0;
@@ -13,57 +13,92 @@ body {
 }
 
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     position: fixed;
-    width: 100%;
     top: 0;
-    left: 0;
+    width: 100%;
+    background-color: #333;
     z-index: 1000;
+    transition: top 0.3s;
 }
 
-header a {
-    color: #fff;
+header .logo {
+    color: white;
     text-decoration: none;
-    margin: 0 15px;
+    font-size: 24px;
+    padding: 10px 20px;
+    display: inline-block;
 }
 
-.menu-toggle {
-    display: none;
-    cursor: pointer;
+header nav {
+    float: right;
 }
 
-nav.active {
-    display: block;
+header nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
 }
 
-nav {
-    display: flex;
+header nav a.active {
+    background-color: #575757;
+}
+
+header nav a:hover {
+    background-color: #444;
 }
 
 @media screen and (max-width: 768px) {
-    nav {
+    header nav {
         display: none;
-        width: 100%;
-        flex-direction: column;
+        position: fixed;
+        top: 50px;
+        right: 0;
         background-color: #333;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        padding: 20px;
+        width: 100%;
+        z-index: 999;
+        text-align: center;
     }
 
-    .menu-toggle {
+    header nav a {
         display: block;
+        padding: 15px;
+        border-bottom: 1px solid #444;
     }
 
-    nav.active {
-        display: flex;
+    header nav a:hover {
+        background-color: #575757;
+    }
+
+    header .menu-toggle {
+        display: block;
+        color: white;
+        padding: 15px;
+        cursor: pointer;
+        font-size: 24px;
+    }
+
+    header.active nav {
+        display: block;
     }
 }
 
-/* Add other styles as needed */
+/* General page section styling */
+section {
+    padding: 100px 20px;
+    margin-top: 60px; /* Space for fixed header */
+}
+
+h2, h3 {
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* Styling for active links in navigation */
+nav a.active {
+    background-color: #444;
+}
+
