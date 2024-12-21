@@ -20,23 +20,50 @@
     </header>
 
     <section id="contact" class="contact">
-        <h2>Contact</h2>
+        <h2>Contact Me</h2>
+        <p>I'd love to hear from you! Please fill out the form below and I'll get back to you as soon as possible.</p>
+        
         <form id="contact-form">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your Name" required>
-            
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Your Email" required>
-            
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-            
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+
             <input type="submit" value="Send Message">
         </form>
     </section>
 
+    <footer>
+        <p>© 2024 Amshuman Gajula. All Rights Reserved.</p>
+    </footer>
+
+    <script type="text/javascript">
+        // Initialize EmailJS with your public key
+        emailjs.init("xJHOWMoydMXmvkpW_");  // Replace with your actual public key
+
+        // Add event listener to form submission
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault();  // Prevent form from refreshing the page
+            
+            var form = event.target;
+            
+            // Send the email using EmailJS with your specific Service ID and Template ID
+            emailjs.sendForm("service_nx1w5mi", "template_y2afi4x", form)
+                .then(function(response) {
+                    alert("Message sent successfully!");
+                    form.reset();  // Reset the form after sending the message
+                }, function(error) {
+                    alert("Failed to send message. Please try again later.");
+                });
+        });
+    </script>
 </body>
 </html>
+
 
 
 
