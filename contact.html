@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
     <title>Contact - Portfolio</title>
 </head>
 <body>
@@ -21,15 +20,23 @@
     </header>
 
     <section id="contact" class="contact">
-        <h2>Contact Me</h2>
-        <p>If you'd like to get in touch or have any questions, feel free to reach out via email or LinkedIn!</p>
-        
-        <h3>Email:</h3>
-        <p><a href="mailto:amshumangajula18@gmail.com">amshumangajula18@gmail.com</a></p>
-
-        <h3>LinkedIn:</h3>
-        <p><a href="https://www.linkedin.com/in/amshuman-gajula" target="_blank">Visit my LinkedIn</a></p>
+        <h2>Contact</h2>
+        <form id="contact-form">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+            
+            <input type="submit" value="Send Message">
+        </form>
     </section>
+
+</body>
+</html>
 
 </body>
 </html>
