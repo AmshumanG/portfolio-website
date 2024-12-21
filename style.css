@@ -1,104 +1,38 @@
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+// Hide header on scroll down, show it on scroll up
+let lastScrollTop = 0;
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    let currentScroll = window.pageYOffset;
 
-/* Reset some default browser styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-}
-
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #333;
-    z-index: 1000;
-    transition: top 0.3s;
-}
-
-header .logo {
-    color: white;
-    text-decoration: none;
-    font-size: 24px;
-    padding: 10px 20px;
-    display: inline-block;
-}
-
-header nav {
-    float: right;
-}
-
-header nav a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    display: inline-block;
-}
-
-header nav a.active {
-    background-color: #575757;
-}
-
-header nav a:hover {
-    background-color: #444;
-}
-
-@media screen and (max-width: 768px) {
-    header nav {
-        display: none;
-        position: fixed;
-        top: 50px;
-        right: 0;
-        background-color: #333;
-        width: 100%;
-        z-index: 999;
-        text-align: center;
+    if (currentScroll > lastScrollTop) {
+        // Scroll Down
+        header.classList.add('hidden'); // Hide header
+    } else {
+        // Scroll Up
+        header.classList.remove('hidden'); // Show header
     }
 
-    header nav a {
-        display: block;
-        padding: 15px;
-        border-bottom: 1px solid #444;
-    }
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Prevent negative values
+});
 
-    header nav a:hover {
-        background-color: #575757;
-    }
+// Add the 'active' class to the nav items on scroll
+window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('nav a');
 
-    header .menu-toggle {
-        display: block;
-        color: white;
-        padding: 15px;
-        cursor: pointer;
-        font-size: 24px;
-    }
+    let currentSection = '';
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (window.pageYOffset >= sectionTop - sectionHeight / 3) {
+            currentSection = section.getAttribute('id');
+        }
+    });
 
-    header.active nav {
-        display: block;
-    }
-}
-
-/* General page section styling */
-section {
-    padding: 100px 20px;
-    margin-top: 60px; /* Space for fixed header */
-}
-
-h2, h3 {
-    margin-bottom: 20px;
-}
-
-p {
-    margin-bottom: 15px;
-}
-
-/* Styling for active links in navigation */
-nav a.active {
-    background-color: #444;
-}
-
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').includes(currentSection)) {
+            link.classList.add('active');
+        }
+    });
+});
