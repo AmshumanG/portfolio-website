@@ -18,11 +18,10 @@ html {
 }
 
 body {
-    background-color: #111;
+    background-color: black;
     color: white;
     line-height: 1.6;
     overflow-x: hidden;
-    font-size: 1.6rem; /* Better base font size */
 }
 
 /* Header Section */
@@ -32,89 +31,74 @@ header {
     left: 0;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
-    padding: 1.5rem 5%;
+    padding: 1rem 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Shadow for better depth */
 }
 
 .logo {
-    font-size: 2.8rem;
-    font-weight: 600;
-    color: #e63946; /* Red accent */
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #b74b4b;
 }
 
 nav {
     display: flex;
-    gap: 2.5rem;
+    gap: 2rem;
 }
 
 nav a {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     color: white;
     transition: 0.3s ease;
-    font-weight: 500;
 }
 
 nav a:hover {
-    color: #e63946;
-    font-weight: 700;
-    text-decoration: underline;
+    color: #b74b4b;
+    font-weight: bold;
 }
 
 /* Section Styling */
 section {
-    padding: 10rem 10%;
+    padding: 8rem 10%;
 }
 
 section h2 {
-    font-size: 3.5rem;
-    color: #e63946;
-    margin-bottom: 2.5rem;
-    font-weight: 700;
+    font-size: 3rem;
+    color: #b74b4b;
+    margin-bottom: 2rem;
 }
 
 section p {
-    font-size: 1.7rem;
-    line-height: 1.8;
-    color: #dcdcdc;
+    font-size: 1.6rem;
 }
 
 /* Home Section */
 .home {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 4rem;
-    margin-top: 12rem;
-    flex-wrap: wrap;
+    margin-top: 10rem;
 }
 
 .home-content h1 {
     font-size: 4.5rem;
-    margin-bottom: 1.5rem;
-    font-weight: 700;
+    margin-bottom: 1rem;
 }
 
 .typing-text {
     font-size: 2rem;
-    color: #e63946;
-    margin-bottom: 2rem;
-    font-weight: 500;
+    color: #b74b4b;
+    margin-bottom: 1.5rem;
 }
 
 .home-img img {
     width: 30vw;
-    max-width: 400px;
     border-radius: 50%;
-    box-shadow: 0 4px 40px rgba(230, 57, 70, 0.5);
-    transition: transform 0.3s ease;
-}
-
-.home-img img:hover {
-    transform: scale(1.1);
+    box-shadow: 0 0 20px #b74b4b;
 }
 
 /* Social Media Icons */
@@ -128,146 +112,135 @@ section p {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 4.5rem;
-    height: 4.5rem;
-    border: 2px solid #e63946;
-    color: #e63946;
-    font-size: 2.4rem;
+    width: 4rem;
+    height: 4rem;
+    border: 0.2rem solid #b74b4b;
+    color: #b74b4b;
+    font-size: 2rem;
     border-radius: 50%;
-    transition: all 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .social-icons a:hover {
-    background-color: #e63946;
+    background-color: #b74b4b;
     color: white;
-    box-shadow: 0 0 20px rgba(230, 57, 70, 0.6);
+    box-shadow: 0 0 20px #b74b4b;
     transform: scale(1.1);
 }
 
-/* Projects and Experience Sections */
-.projects ul, .experience div {
+/* Hire Me Section */
+.hire-me {
+    background-color: #e63946;
+    padding: 5rem 10%;
+    color: white;
+    text-align: center;
+    border-radius: 12px;
+    margin: 3rem 0;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.hire-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hire-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.hire-text {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: #f1f1f1;
+    line-height: 1.6;
+}
+
+/* Buttons Container */
+.hire-btns {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
     margin-top: 2rem;
 }
 
-.projects ul li, .experience div p {
+/* General Button Styling */
+.btn {
+    display: inline-block;
+    padding: 1.5rem 3rem;
     font-size: 1.8rem;
-    margin-bottom: 1.2rem;
-    line-height: 1.8;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Contact Section */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.8rem;
-    max-width: 600px;
-    margin: auto;
+/* View My Work Button */
+.view-work-btn {
+    background-color: white;
+    color: #e63946;
 }
 
-form label {
-    font-size: 1.7rem;
-}
-
-form input, form textarea {
-    width: 100%;
-    padding: 1.3rem;
-    font-size: 1.6rem;
-    border-radius: 8px;
-    border: 2px solid #dcdcdc;
-    background-color: #333;
-    color: white;
-}
-
-form input[type="submit"] {
+.view-work-btn:hover {
     background-color: #e63946;
     color: white;
-    cursor: pointer;
-    transition: 0.3s ease;
-    font-weight: 600;
-    border: none;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
 }
 
-form input[type="submit"]:hover {
-    background-color: #d65c5c;
+.view-work-btn:active {
+    transform: scale(0.98);
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 2rem 0;
-    font-size: 1.7rem;
-    background-color: #222;
-    color: #dcdcdc;
+/* Hire Me Button */
+.hire-me-btn {
+    background-color: #f1faee;
+    color: #1d3557;
+}
+
+.hire-me-btn:hover {
+    background-color: #1d3557;
+    color: white;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.hire-me-btn:active {
+    transform: scale(0.98);
 }
 
 /* Responsive Design */
-
-/* For Tablets and Smaller Screens */
-@media (max-width: 1024px) {
-    html {
-        font-size: 56.25%; /* 1rem = 9px */
-    }
-    
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .home {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .home-img img {
-        width: 50vw;
-    }
-
-    .social-icons {
-        justify-content: center;
-    }
-}
-
-/* For Mobile Devices */
 @media (max-width: 768px) {
-    html {
-        font-size: 50%; /* 1rem = 8px */
+    .hire-title {
+        font-size: 2.8rem;
     }
 
-    section {
-        padding: 6rem 5%;
-    }
-
-    nav {
-        flex-direction: column;
-        gap: 1.5rem;
-    }
-
-    nav a {
+    .hire-text {
         font-size: 1.6rem;
     }
 
-    .home-img img {
-        width: 70vw;
-    }
-
-    .social-icons a {
-        width: 3.5rem;
-        height: 3.5rem;
-        font-size: 1.8rem;
+    .btn {
+        font-size: 1.6rem;
+        padding: 1rem 2.5rem;
     }
 }
 
 @media (max-width: 480px) {
-    .home-content h1 {
-        font-size: 3.5rem;
+    .hire-title {
+        font-size: 2.4rem;
     }
 
-    .home-img img {
-        width: 80vw;
+    .hire-text {
+        font-size: 1.4rem;
     }
 
-    .social-icons a {
-        width: 2.5rem;
-        height: 2.5rem;
+    .btn {
+        font-size: 1.4rem;
+        padding: 1rem 2rem;
     }
 }
