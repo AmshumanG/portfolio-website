@@ -18,10 +18,11 @@ html {
 }
 
 body {
-    background-color: black;
+    background-color: #111;
     color: white;
     line-height: 1.6;
     overflow-x: hidden;
+    font-size: 1.6rem; /* Better base font size */
 }
 
 /* Header Section */
@@ -31,74 +32,89 @@ header {
     left: 0;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
-    padding: 1rem 5%;
+    padding: 1.5rem 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Shadow for better depth */
 }
 
 .logo {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #b74b4b;
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: #e63946; /* Red accent */
 }
 
 nav {
     display: flex;
-    gap: 2rem;
+    gap: 2.5rem;
 }
 
 nav a {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     color: white;
     transition: 0.3s ease;
+    font-weight: 500;
 }
 
 nav a:hover {
-    color: #b74b4b;
-    font-weight: bold;
+    color: #e63946;
+    font-weight: 700;
+    text-decoration: underline;
 }
 
 /* Section Styling */
 section {
-    padding: 8rem 10%;
+    padding: 10rem 10%;
 }
 
 section h2 {
-    font-size: 3rem;
-    color: #b74b4b;
-    margin-bottom: 2rem;
+    font-size: 3.5rem;
+    color: #e63946;
+    margin-bottom: 2.5rem;
+    font-weight: 700;
 }
 
 section p {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
+    line-height: 1.8;
+    color: #dcdcdc;
 }
 
 /* Home Section */
 .home {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 4rem;
-    margin-top: 10rem;
+    margin-top: 12rem;
+    flex-wrap: wrap;
 }
 
 .home-content h1 {
     font-size: 4.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
 }
 
 .typing-text {
     font-size: 2rem;
-    color: #b74b4b;
-    margin-bottom: 1.5rem;
+    color: #e63946;
+    margin-bottom: 2rem;
+    font-weight: 500;
 }
 
 .home-img img {
     width: 30vw;
+    max-width: 400px;
     border-radius: 50%;
-    box-shadow: 0 0 20px #b74b4b;
+    box-shadow: 0 4px 40px rgba(230, 57, 70, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.home-img img:hover {
+    transform: scale(1.1);
 }
 
 /* Social Media Icons */
@@ -112,19 +128,19 @@ section p {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 4rem;
-    height: 4rem;
-    border: 0.2rem solid #b74b4b;
-    color: #b74b4b;
-    font-size: 2rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    border: 2px solid #e63946;
+    color: #e63946;
+    font-size: 2.4rem;
     border-radius: 50%;
-    transition: 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .social-icons a:hover {
-    background-color: #b74b4b;
+    background-color: #e63946;
     color: white;
-    box-shadow: 0 0 20px #b74b4b;
+    box-shadow: 0 0 20px rgba(230, 57, 70, 0.6);
     transform: scale(1.1);
 }
 
@@ -134,35 +150,41 @@ section p {
 }
 
 .projects ul li, .experience div p {
-    font-size: 1.6rem;
-    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.8;
 }
 
 /* Contact Section */
 form {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    max-width: 500px;
+    gap: 1.8rem;
+    max-width: 600px;
     margin: auto;
 }
 
 form label {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
 }
 
 form input, form textarea {
     width: 100%;
-    padding: 1rem;
+    padding: 1.3rem;
     font-size: 1.6rem;
-    border-radius: 5px;
+    border-radius: 8px;
+    border: 2px solid #dcdcdc;
+    background-color: #333;
+    color: white;
 }
 
 form input[type="submit"] {
-    background-color: #b74b4b;
+    background-color: #e63946;
     color: white;
     cursor: pointer;
     transition: 0.3s ease;
+    font-weight: 600;
+    border: none;
 }
 
 form input[type="submit"]:hover {
@@ -173,8 +195,9 @@ form input[type="submit"]:hover {
 footer {
     text-align: center;
     padding: 2rem 0;
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     background-color: #222;
+    color: #dcdcdc;
 }
 
 /* Responsive Design */
@@ -211,12 +234,12 @@ footer {
     }
 
     section {
-        padding: 5rem 5%;
+        padding: 6rem 5%;
     }
 
     nav {
         flex-direction: column;
-        gap: 1rem;
+        gap: 1.5rem;
     }
 
     nav a {
@@ -228,9 +251,9 @@ footer {
     }
 
     .social-icons a {
-        width: 3rem;
-        height: 3rem;
-        font-size: 1.6rem;
+        width: 3.5rem;
+        height: 3.5rem;
+        font-size: 1.8rem;
     }
 }
 
