@@ -20,7 +20,7 @@ body {
     color: white;
     line-height: 1.6;
     overflow-x: hidden;
-    padding-top: 8rem; /* Added space to prevent overlap with fixed header */
+    padding-top: 8rem; /* Ensure no overlap with the fixed header */
 }
 
 /* Header Section */
@@ -65,7 +65,7 @@ nav a:hover {
     align-items: center;
     justify-content: center;
     gap: 4rem;
-    margin-top: 10rem;
+    margin-top: 10rem; /* To prevent overlap with the header */
 }
 
 .home-content h1 {
@@ -326,6 +326,11 @@ nav a:hover {
     .want-to-work h2 {
         font-size: 2.8rem;
     }
+
+    .want-to-work p {
+        font-size: 1.4rem;
+    }
+}
 
     .want-to-work p {
         font-size: 1.4rem;
