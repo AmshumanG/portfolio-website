@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
 /* Global Reset and Basic Styling */
 * {
     margin: 0;
@@ -57,6 +58,11 @@ nav a {
 nav a:hover {
     color: #b74b4b;
     font-weight: bold;
+}
+
+/* All h1 elements */
+h1 {
+    color: #b74b4b; /* Set color to match the logo */
 }
 
 /* Home Section */
@@ -331,4 +337,3 @@ nav a:hover {
         font-size: 1.4rem;
     }
 }
-
