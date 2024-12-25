@@ -198,4 +198,68 @@ section p {
 /* Hire Me Button */
 .hire-me-btn {
     background-color: #f1faee;
-    color:
+    color: #1d3557;
+}
+
+.hire-me-btn:hover {
+    background-color: #1d3557;
+    color: white;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.hire-me-btn:active {
+    transform: scale(0.98);
+}
+
+/* Want to Work Together Section */
+.want-to-work {
+    background-color: #f1faee; /* Matching the portfolio theme color */
+    padding: 5rem 10%;
+    color: #1d3557;
+    text-align: center;
+    border-radius: 12px;
+    margin: 3rem 0;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.want-to-work h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.want-to-work p {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hire-title {
+        font-size: 2.8rem;
+    }
+
+    .hire-text {
+        font-size: 1.6rem;
+    }
+
+    .btn {
+        font-size: 1.6rem;
+        padding: 1rem 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hire-title {
+        font-size: 2.4rem;
+    }
+
+    .hire-text {
+        font-size: 1.4rem;
+    }
+
+    .btn {
+        font-size: 1.4rem;
+        padding: 1rem 2rem;
+    }
+}
