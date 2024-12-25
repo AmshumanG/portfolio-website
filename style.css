@@ -20,7 +20,6 @@ body {
     color: white;
     line-height: 1.6;
     overflow-x: hidden;
-    padding-top: 8rem; /* Added space to prevent overlap with fixed header */
 }
 
 /* Header Section */
@@ -114,7 +113,7 @@ nav a:hover {
 
 /* Hire Me Section */
 .hire-me {
-    background-color: #e63946;
+    background-color: #e63946; /* Same color for both Hire Me sections */
     padding: 5rem 10%;
     color: white;
     text-align: center;
@@ -200,7 +199,7 @@ nav a:hover {
 
 /* Want to Work Together Section */
 .want-to-work {
-    background-color: #f1faee;
+    background-color: #f1faee; /* Matching the portfolio theme color */
     padding: 5rem 10%;
     color: #1d3557;
     text-align: center;
