@@ -1,6 +1,4 @@
-/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
-
 /* Global Reset and Basic Styling */
 * {
     margin: 0;
@@ -130,7 +128,7 @@ section p {
 
 /* Hire Me Section */
 .hire-me {
-    background-color: #e63946;
+    background-color: #e63946; /* Same color for both Hire Me sections */
     padding: 5rem 10%;
     color: white;
     text-align: center;
@@ -200,48 +198,4 @@ section p {
 /* Hire Me Button */
 .hire-me-btn {
     background-color: #f1faee;
-    color: #1d3557;
-}
-
-.hire-me-btn:hover {
-    background-color: #1d3557;
-    color: white;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-    transform: scale(1.05);
-}
-
-.hire-me-btn:active {
-    transform: scale(0.98);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .hire-title {
-        font-size: 2.8rem;
-    }
-
-    .hire-text {
-        font-size: 1.6rem;
-    }
-
-    .btn {
-        font-size: 1.6rem;
-        padding: 1rem 2.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .hire-title {
-        font-size: 2.4rem;
-    }
-
-    .hire-text {
-        font-size: 1.4rem;
-    }
-
-    .btn {
-        font-size: 1.4rem;
-        padding: 1rem 2rem;
-    }
-}
-
+    color:
