@@ -16,11 +16,11 @@ html {
 }
 
 body {
-    background-color: black;
+    background-color: #121212; /* Dark theme background */
     color: white;
     line-height: 1.6;
     overflow-x: hidden;
-    padding-top: 8rem; /* Ensure no overlap with the fixed header */
+    padding-top: 8rem; /* Prevent overlap with fixed header */
 }
 
 /* Header Section */
@@ -29,23 +29,29 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
-    padding: 1rem 5%;
+    background-color: #333333; /* Darker background */
+    padding: 1.5rem 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
+    border-bottom: 2px solid #b74b4b; /* Adding a nice border for separation */
 }
 
 .logo {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: bold;
-    color: #b74b4b;
+    color: #e63946; /* Accent color */
+    transition: 0.3s ease;
+}
+
+.logo:hover {
+    color: #f1faee; /* Lighter color on hover */
 }
 
 nav {
     display: flex;
-    gap: 2rem;
+    gap: 3rem;
 }
 
 nav a {
@@ -55,7 +61,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #b74b4b;
+    color: #e63946; /* Accent color on hover */
     font-weight: bold;
 }
 
@@ -65,24 +71,25 @@ nav a:hover {
     align-items: center;
     justify-content: center;
     gap: 4rem;
-    margin-top: 10rem; /* To prevent overlap with the header */
+    margin-top: 10rem; /* Space to avoid header overlap */
 }
 
 .home-content h1 {
-    font-size: 4.5rem;
+    font-size: 4.8rem;
+    font-weight: 700;
     margin-bottom: 1rem;
 }
 
 .typing-text {
-    font-size: 2rem;
-    color: #b74b4b;
+    font-size: 2.2rem;
+    color: #e63946; /* Accent color for typing text */
     margin-bottom: 1.5rem;
 }
 
 .home-img img {
     width: 30vw;
     border-radius: 50%;
-    box-shadow: 0 0 20px #b74b4b;
+    box-shadow: 0 0 20px #e63946; /* Accent color shadow */
 }
 
 /* Social Media Icons */
@@ -98,17 +105,17 @@ nav a:hover {
     align-items: center;
     width: 4rem;
     height: 4rem;
-    border: 0.2rem solid #b74b4b;
-    color: #b74b4b;
+    border: 0.2rem solid #e63946; /* Border color matches accent */
+    color: #e63946;
     font-size: 2rem;
     border-radius: 50%;
     transition: 0.3s ease;
 }
 
 .social-icons a:hover {
-    background-color: #b74b4b;
+    background-color: #e63946;
     color: white;
-    box-shadow: 0 0 20px #b74b4b;
+    box-shadow: 0 0 20px #e63946;
     transform: scale(1.1);
 }
 
@@ -130,9 +137,9 @@ nav a:hover {
 }
 
 .hire-title {
-    font-size: 3.5rem;
+    font-size: 3.8rem;
     font-weight: 700;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     color: white;
 }
 
@@ -147,38 +154,33 @@ nav a:hover {
 .hire-btns {
     display: flex;
     justify-content: center;
-    gap: 3rem;
-    margin-top: 2rem;
+    gap: 4rem;
+    margin-top: 3rem;
 }
 
-/* General Button Styling */
-.btn {
-    display: inline-block;
-    padding: 1.5rem 3rem;
-    font-size: 1.8rem;
+.view-work-btn, .hire-me-btn {
+    padding: 1.5rem 4rem;
+    font-size: 2rem;
     font-weight: 600;
     border-radius: 50px;
     transition: all 0.3s ease;
     cursor: pointer;
     text-decoration: none;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem; /* Add some distance from the text */
 }
 
 /* View My Work Button */
 .view-work-btn {
-    background-color: white;
-    color: #e63946;
+    background-color: #f1faee;
+    color: #1d3557; /* Dark blue */
 }
 
 .view-work-btn:hover {
-    background-color: #e63946;
+    background-color: #1d3557;
     color: white;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
     transform: scale(1.05);
-}
-
-.view-work-btn:active {
-    transform: scale(0.98);
 }
 
 /* Hire Me Button */
@@ -192,10 +194,6 @@ nav a:hover {
     color: white;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
     transform: scale(1.05);
-}
-
-.hire-me-btn:active {
-    transform: scale(0.98);
 }
 
 /* Want to Work Together Section */
@@ -246,7 +244,7 @@ nav a:hover {
 
     /* Buttons */
     .view-work-btn, .hire-me-btn {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
         padding: 1rem 2.5rem;
     }
 
@@ -332,7 +330,3 @@ nav a:hover {
     }
 }
 
-    .want-to-work p {
-        font-size: 1.4rem;
-    }
-}
