@@ -21,7 +21,7 @@ body {
     color: white;
     line-height: 1.6;
     overflow-x: hidden;
-    padding-top: 8rem; /* Ensure no overlap with the fixed header */
+    padding: clamp(1rem, 2%, 8rem) clamp(2%, 5%, 10%);
 }
 
 /* Header Section */
@@ -50,7 +50,7 @@ nav {
 }
 
 nav a {
-    font-size: 1.8reM;
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
     color: white;
     transition: 0.3s ease;
 }
@@ -63,6 +63,7 @@ nav a:hover {
 /* All h1 elements */
 h1 {
     color: #b74b4b; /* Set color to match the logo */
+    font-size: clamp(2rem, 5vw, 3.5rem);
 }
 
 /* Home Section */
@@ -75,18 +76,18 @@ h1 {
 }
 
 .home-content h1 {
-    font-size: 4.5rem;
+    font-size: clamp(2.5rem, 4vw, 3.2rem);
     margin-bottom: 1rem;
 }
 
 .typing-text {
-    font-size: 2rem;
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
     color: #b74b4b;
     margin-bottom: 1.5rem;
 }
 
 .home-img img {
-    width: 30vw;
+    width: clamp(40%, 60vw, 70%);
     border-radius: 50%;
     box-shadow: 0 0 20px #b74b4b;
 }
@@ -102,11 +103,11 @@ h1 {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 4rem;
-    height: 4rem;
+    width: clamp(3rem, 5vw, 4rem);
+    height: clamp(3rem, 5vw, 4rem);
     border: 0.2rem solid #b74b4b;
     color: #b74b4b;
-    font-size: 2rem;
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
     border-radius: 50%;
     transition: 0.3s ease;
 }
@@ -136,14 +137,14 @@ h1 {
 }
 
 .hire-title {
-    font-size: 3.5rem;
+    font-size: clamp(2rem, 5vw, 3.5rem);
     font-weight: 700;
     margin-bottom: 1.5rem;
     color: white;
 }
 
 .hire-text {
-    font-size: 1.8rem;
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
     margin-bottom: 2rem;
     color: #f1f1f1;
     line-height: 1.6;
@@ -160,8 +161,8 @@ h1 {
 /* General Button Styling */
 .btn {
     display: inline-block;
-    padding: 1.5rem 3rem;
-    font-size: 1.8rem;
+    padding: clamp(1rem, 2vw, 1.5rem) clamp(2rem, 4vw, 3rem);
+    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
     font-weight: 600;
     border-radius: 50px;
     transition: all 0.3s ease;
@@ -216,17 +217,21 @@ h1 {
 }
 
 .want-to-work h2 {
-    font-size: 3.5rem;
+    font-size: clamp(2rem, 5vw, 3.5rem);
     margin-bottom: 1.5rem;
 }
 
 .want-to-work p {
-    font-size: 1.8rem;
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
     margin-bottom: 2rem;
 }
 
 /* Responsive Design for Mobile */
 @media (max-width: 768px) {
+    html {
+        font-size: 56.25%; /* 1rem = 9px */
+    }
+
     .home {
         flex-direction: column;
         text-align: center;
@@ -235,53 +240,49 @@ h1 {
     }
 
     .home-img img {
-        width: 50vw;
+        width: clamp(40%, 60vw, 70%);
     }
 
     .home-content h1 {
-        font-size: 3.5rem;
+        font-size: clamp(2.5rem, 4vw, 3.2rem);
     }
 
     .typing-text {
-        font-size: 1.8rem;
+        font-size: clamp(1.2rem, 2.5vw, 1.8rem);
     }
 
     .social-icons {
         gap: 1rem;
     }
 
-    /* Buttons */
     .view-work-btn, .hire-me-btn {
-        font-size: 1.6rem;
-        padding: 1rem 2.5rem;
+        font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+        padding: clamp(1rem, 2vw, 1.5rem) clamp(2rem, 4vw, 3rem);
     }
 
-    /* Hire Me Section */
     .hire-title {
-        font-size: 2.8rem;
+        font-size: clamp(2rem, 5vw, 3.5rem);
     }
 
     .hire-text {
-        font-size: 1.6rem;
+        font-size: clamp(1.2rem, 2.5vw, 1.8rem);
     }
 
-    /* Want to Work Together Section */
     .want-to-work h2 {
-        font-size: 3rem;
+        font-size: clamp(2rem, 5vw, 3.5rem);
     }
 
     .want-to-work p {
-        font-size: 1.6rem;
+        font-size: clamp(1.2rem, 2.5vw, 1.8rem);
     }
 
-    /* Header */
     nav {
         flex-direction: column;
         gap: 1.5rem;
     }
 
     nav a {
-        font-size: 1.6rem;
+        font-size: clamp(1.2rem, 2.5vw, 1.8rem);
     }
 
     .hire-btns {
@@ -291,49 +292,50 @@ h1 {
 }
 
 @media (max-width: 480px) {
+    html {
+        font-size: 50%; /* 1rem = 8px */
+    }
+
     .home {
         margin-top: 4rem;
     }
 
     .home-img img {
-        width: 60vw;
+        width: clamp(40%, 60vw, 70%);
     }
 
     .home-content h1 {
-        font-size: 2.8rem;
+        font-size: clamp(2rem, 3.5vw, 2.6rem);
     }
 
     .typing-text {
-        font-size: 1.6rem;
+        font-size: clamp(0.9rem, 2vw, 1.4rem);
     }
 
     .social-icons a {
-        width: 3.5rem;
-        height: 3.5rem;
-        font-size: 1.8rem;
+        width: clamp(2.5rem, 4vw, 3.5rem);
+        height: clamp(2.5rem, 4vw, 3.5rem);
+        font-size: clamp(1rem, 2vw, 1.8rem);
     }
 
-    /* Hire Me Section */
     .hire-title {
-        font-size: 2.4rem;
+        font-size: clamp(2rem, 5vw, 3.5rem);
     }
 
     .hire-text {
-        font-size: 1.4rem;
+        font-size: clamp(1.2rem, 2.5vw, 1.8rem);
     }
 
-    /* Buttons */
     .view-work-btn, .hire-me-btn {
-        font-size: 1.4rem;
-        padding: 1rem 2rem;
+        font-size: clamp(1.2rem, 2vw, 1.4rem);
+        padding: clamp(0.8rem, 2vw, 1rem) clamp(2rem, 4vw, 3rem);
     }
 
-    /* Want to Work Together Section */
     .want-to-work h2 {
-        font-size: 2.8rem;
+        font-size: clamp(2rem, 5vw, 3.5rem);
     }
 
     .want-to-work p {
-        font-size: 1.4rem;
+        font-size: clamp(1.2rem, 2.5vw, 1.8rem);
     }
 }
