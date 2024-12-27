@@ -13,32 +13,20 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
 }
 
 /* Main Section */
 .main-section {
     text-align: center;
     padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Flex Container for Icons and Buttons */
-.flex-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem; /* Space between social icons and buttons */
-    flex-wrap: wrap; /* Allow wrapping if screen size is small */
-    margin-top: 2rem;
 }
 
 /* Social Media Icons */
 .social-icons {
     display: flex;
     gap: 1.5rem;
+    margin-top: 2rem;
+    justify-content: center;
 }
 
 .social-icons a {
@@ -61,10 +49,12 @@ body {
     transform: scale(1.1);
 }
 
-/* Buttons */
+/* Buttons Container */
 .hire-btns {
     display: flex;
-    gap: 2rem; /* Space between the two buttons */
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 4rem; /* Add space between social icons and buttons */
 }
 
 /* General Button Styling */
