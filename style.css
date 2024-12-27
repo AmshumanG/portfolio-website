@@ -72,7 +72,7 @@ h1 {
     align-items: center;
     justify-content: center;
     gap: 4rem;
-    margin-top: 10rem; /* To prevent overlap with the header */
+    margin-top: 12rem; /* Adjusted to move text lower */
 }
 
 .home-content h1 {
@@ -301,59 +301,3 @@ h1 {
     box-shadow: 0 0 10px #e63946;
 }
 
-/* Form Styling */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-form input,
-form textarea {
-    padding: 1rem;
-    font-size: 1.6rem;
-    border-radius: 8px;
-    border: 2px solid #b74b4b;
-    background-color: transparent;
-    color: white;
-}
-
-form input:focus,
-form textarea:focus {
-    outline: none;
-    border-color: #e63946;
-}
-
-form button {
-    padding: 1.5rem 3rem;
-    background-color: #e63946;
-    color: white;
-    font-size: 1.8rem;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border: none;
-}
-
-form button:hover {
-    background-color: #b74b4b;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
-
-form button:active {
-    transform: scale(0.98);
-}
-
-/* Footer Section */
-footer {
-    background-color: #1d3557;
-    padding: 3rem 0;
-    text-align: center;
-    color: white;
-}
-
-footer p {
-    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
-}
