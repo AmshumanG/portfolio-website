@@ -268,14 +268,13 @@ h1 {
 
 /* Contact Section */
 .contact {
-    padding: 4rem 10%;
-    margin-top: 6rem; /* Adds spacing after the header */
-    background-color: #f1faee;
-    color: #1d3557;
+    background-color: #e63946; /* Match with other sections */
+    padding: 6rem 10%;
+    text-align: center;
+    color: white;
     border-radius: 12px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    border-radius: 12px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    margin: 3rem 0;
 }
 
 .contact h1 {
@@ -288,12 +287,4 @@ h1 {
     font-size: clamp(1.2rem, 2.5vw, 1.8rem);
     margin-bottom: 2rem;
     color: #f1f1f1;
-}
-
-/* Footer Section */
-footer {
-    text-align: center;
-    background-color: #1d3557;
-    padding: 2rem;
-    color: white;
 }
