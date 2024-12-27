@@ -9,7 +9,6 @@
     border: none;
     outline: none;
     font-family: 'Poppins', sans-serif;
-   
 }
 
 html {
@@ -73,7 +72,7 @@ h1 {
     align-items: center;
     justify-content: center;
     gap: 4rem;
-    margin-top: 10rem; /* To prevent overlap with the header */
+    margin-top: 12rem; /* Increased to avoid overlap with the header */
 }
 
 .home-content h1 {
@@ -118,6 +117,46 @@ h1 {
     color: white;
     box-shadow: 0 0 20px #b74b4b;
     transform: scale(1.1);
+}
+
+/* Education Section */
+.education {
+    padding: 4rem 10%;
+    margin-top: 6rem; /* Adds spacing after the header */
+    background-color: #f1faee;
+    color: #1d3557;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Experience Section */
+.experience {
+    padding: 4rem 10%;
+    margin-top: 6rem; /* Adds spacing after the header */
+    background-color: #e63946;
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Skills Section */
+.skills {
+    padding: 4rem 10%;
+    margin-top: 6rem; /* Adds spacing after the header */
+    background-color: #f1faee;
+    color: #1d3557;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Projects Section */
+.projects {
+    padding: 4rem 10%;
+    margin-top: 6rem; /* Adds spacing after the header */
+    background-color: #e63946;
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Hire Me Section */
@@ -215,7 +254,6 @@ h1 {
     border-radius: 12px;
     margin: 3rem 0;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    margin-top: 10rem; /* Prevent overlap with header */
 }
 
 .want-to-work h2 {
@@ -226,11 +264,6 @@ h1 {
 .want-to-work p {
     font-size: clamp(1.2rem, 2.5vw, 1.8rem);
     margin-bottom: 2rem;
-}
-
-/* Experience, Skills, Projects, etc. Sections */
-.experience, .skills, .projects {
-    margin-top: 10rem; /* Adjusted for spacing */
 }
 
 /* Contact Section */
@@ -253,56 +286,4 @@ h1 {
 .contact p {
     font-size: clamp(1.2rem, 2.5vw, 1.8rem);
     margin-bottom: 2rem;
-    color: #f1f1f1;
-}
-
-.contact-info {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 2rem;
-    margin-bottom: 4rem;
-}
-
-.contact-item h3 {
-    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
-    color: #b74b4b;
-    margin-bottom: 1rem;
-}
-
-.contact-item p {
-    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
-}
-
-.contact-item a {
-    color: #f1f1f1;
-    text-decoration: none;
-}
-
-.contact-item a:hover {
-    color: #e63946;
-    font-weight: bold;
-}
-
-.social-icons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-}
-
-.social-icons a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 3rem;
-    height: 3rem;
-    border: 2px solid #e63946;
-    color: #e63946;
-    border-radius: 50%;
-    transition: 0.3s ease;
-}
-
-.social-icons a:hover {
-    background-color: #e63946;
-    color: white;
-    transform: scale(1.1);
-}
+    color: #f1f1
