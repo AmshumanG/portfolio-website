@@ -214,6 +214,7 @@ h1 {
     border-radius: 12px;
     margin: 3rem 0;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    margin-top: 10rem; /* Prevent overlap with header */
 }
 
 .want-to-work h2 {
@@ -224,6 +225,11 @@ h1 {
 .want-to-work p {
     font-size: clamp(1.2rem, 2.5vw, 1.8rem);
     margin-bottom: 2rem;
+}
+
+/* Experience, Skills, Projects, etc. Sections */
+.experience, .skills, .projects {
+    margin-top: 10rem; /* Adjusted for spacing */
 }
 
 /* Contact Section */
@@ -298,47 +304,4 @@ h1 {
     background-color: #e63946;
     color: white;
     transform: scale(1.1);
-    box-shadow: 0 0 10px #e63946;
-}
-
-/* Form Styling */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-form input,
-form textarea {
-    padding: 1.5rem;
-    border: 2px solid #e63946;
-    border-radius: 10px;
-    font-size: 1.6rem;
-    color: #1d3557;
-    background-color: transparent;
-    transition: 0.3s ease;
-}
-
-form input:focus,
-form textarea:focus {
-    border-color: #e63946;
-    outline: none;
-}
-
-form button {
-    padding: 1.5rem;
-    background-color: #e63946;
-    color: white;
-    font-size: 1.6rem;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.3s ease;
-    border: none;
-}
-
-form button:hover {
-    background-color: #1d3557;
-    box-shadow: 0 0 10px #e63946;
 }
