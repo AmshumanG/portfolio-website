@@ -226,116 +226,129 @@ h1 {
     margin-bottom: 2rem;
 }
 
+/* Contact Section */
+.contact {
+    background-color: #1d3557;
+    padding: 6rem 10%;
+    text-align: center;
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    margin: 3rem 0;
+}
+
+.contact h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: #e63946;
+    margin-bottom: 1.5rem;
+}
+
+.contact p {
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+    margin-bottom: 2rem;
+    color: #f1f1f1;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.contact-item h3 {
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+    color: #b74b4b;
+    margin-bottom: 1rem;
+}
+
+.contact-item p {
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+}
+
+.contact-item a {
+    color: #f1f1f1;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    color: #e63946;
+    font-weight: bold;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    border: 2px solid #e63946;
+    color: #e63946;
+    border-radius: 50%;
+    transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: #e63946;
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #e63946;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form input, form textarea {
+    padding: 1.2rem;
+    font-size: 1.6rem;
+    border-radius: 5px;
+    border: 2px solid #b74b4b;
+    background-color: #f1f1f1;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #e63946;
+    outline: none;
+}
+
+form input[type="submit"] {
+    background-color: #e63946;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #b74b4b;
+    transform: scale(1.05);
+}
+
+form input[type="submit"]:active {
+    transform: scale(0.98);
+}
+
 /* Responsive Design for Mobile */
 @media (max-width: 768px) {
     html {
         font-size: 56.25%; /* 1rem = 9px */
     }
 
-    .home {
-        flex-direction: column;
-        text-align: center;
-        gap: 2rem;
-        margin-top: 6rem;
-    }
-
-    .home-img img {
-        width: clamp(40%, 60vw, 70%);
-    }
-
-    .home-content h1 {
-        font-size: clamp(2.5rem, 4vw, 3.2rem);
-    }
-
-    .typing-text {
-        font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-    }
-
-    .social-icons {
-        gap: 1rem;
-    }
-
-    .view-work-btn, .hire-me-btn {
-        font-size: clamp(1.4rem, 2.5vw, 1.8rem);
-        padding: clamp(1rem, 2vw, 1.5rem) clamp(2rem, 4vw, 3rem);
-    }
-
-    .hire-title {
-        font-size: clamp(2rem, 5vw, 3.5rem);
-    }
-
-    .hire-text {
-        font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-    }
-
-    .want-to-work h2 {
-        font-size: clamp(2rem, 5vw, 3.5rem);
-    }
-
-    .want-to-work p {
-        font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-    }
-
-    nav {
-        flex-direction: column;
-        gap: 1.5rem;
-    }
-
-    nav a {
-        font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-    }
-
-    .hire-btns {
-        flex-direction: column;
-        gap: 2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    html {
-        font-size: 50%; /* 1rem = 8px */
-    }
-
-    .home {
-        margin-top: 4rem;
-    }
-
-    .home-img img {
-        width: clamp(40%, 60vw, 70%);
-    }
-
-    .home-content h1 {
-        font-size: clamp(2rem, 3.5vw, 2.6rem);
-    }
-
-    .typing-text {
-        font-size: clamp(0.9rem, 2vw, 1.4rem);
-    }
-
-    .social-icons a {
-        width: clamp(2.5rem, 4vw, 3.5rem);
-        height: clamp(2.5rem, 4vw, 3.5rem);
-        font-size: clamp(1rem, 2vw, 1.8rem);
-    }
-
-    .hire-title {
-        font-size: clamp(2rem, 5vw, 3.5rem);
-    }
-
-    .hire-text {
-        font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-    }
-
-    .view-work-btn, .hire-me-btn {
-        font-size: clamp(1.2rem, 2vw, 1.4rem);
-        padding: clamp(0.8rem, 2vw, 1rem) clamp(2rem, 4vw, 3rem);
-    }
-
-    .want-to-work h2 {
-        font-size: clamp(2rem, 5vw, 3.5rem);
-    }
-
-    .want-to-work p {
-        font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+    .contact-info {
+        grid-template-columns: 1fr;
     }
 }
