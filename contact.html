@@ -21,8 +21,28 @@
 
     <section id="contact" class="contact">
         <h1>Contact Me</h1>
-        <p>I'd love to hear from you! Please fill out the form below and I'll get back to you as soon as possible.</p>
-        
+        <p>I would love to hear from you! Feel free to drop a message or connect through social media.</p>
+
+        <div class="contact-info">
+            <div class="contact-item">
+                <h3>Phone</h3>
+                <p><a href="tel:+918341390391">+91 8341390391</a></p>
+            </div>
+            <div class="contact-item">
+                <h3>Email</h3>
+                <p><a href="mailto:amshumangajula18@gmail.com">amshumangajula18@gmail.com</a></p>
+            </div>
+            <div class="contact-item">
+                <h3>Social Media</h3>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/amshuman-gajula/" target="_blank" class="fab fa-linkedin"></a>
+                    <a href="https://github.com/amshumangajula" target="_blank" class="fab fa-github"></a>
+                    <a href="https://twitter.com/amshumangajula" target="_blank" class="fab fa-twitter"></a>
+                </div>
+            </div>
+        </div>
+
+        <h2>Send a Message</h2>
         <form id="contact-form">
             <label for="name">Your Name</label>
             <input type="text" id="name" name="name" placeholder="Enter your name" required>
@@ -42,20 +62,17 @@
     </footer>
 
     <script type="text/javascript">
-        // Initialize EmailJS with your public key
-        emailjs.init("xJHOWMoydMXmvkpW_");  // Replace with your actual public key
+        emailjs.init("xJHOWMoydMXmvkpW_");
 
-        // Add event listener to form submission
         document.getElementById("contact-form").addEventListener("submit", function(event) {
-            event.preventDefault();  // Prevent form from refreshing the page
-            
+            event.preventDefault();
+
             var form = event.target;
-            
-            // Send the email using EmailJS with your specific Service ID and Template ID
+
             emailjs.sendForm("service_nx1w5mi", "template_y2afi4x", form)
                 .then(function(response) {
                     alert("Message sent successfully!");
-                    form.reset();  // Reset the form after sending the message
+                    form.reset();
                 }, function(error) {
                     alert("Failed to send message. Please try again later.");
                 });
@@ -63,6 +80,7 @@
     </script>
 </body>
 </html>
+
 
 
 
