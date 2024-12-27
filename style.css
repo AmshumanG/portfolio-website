@@ -1,69 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
-/* Global Reset and Basic Styling */
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
-    border: none;
-    outline: none;
-    font-family: 'Poppins', sans-serif;
-}
-
-html {
-    font-size: 62.5%; /* 1rem = 10px */
-    scroll-behavior: smooth;
+    font-family: 'Arial', sans-serif;
 }
 
 body {
-    background-color: black;
-    color: white;
+    background-color: #f1f1f1;
     line-height: 1.6;
-    overflow-x: hidden;
-    padding: clamp(1rem, 2%, 8rem) clamp(2%, 5%, 10%);
-}
-
-/* Header Section */
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
-    padding: 1rem 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
-}
-
-.logo {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #b74b4b;
-}
-
-nav {
-    display: flex;
-    gap: 2rem;
-}
-
-nav a {
-    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-    color: white;
-    transition: 0.3s ease;
-}
-
-nav a:hover {
-    color: #b74b4b;
-    font-weight: bold;
-}
-
-/* All h1 elements */
-h1 {
-    color: #b74b4b; /* Set color to match the logo */
-    font-size: clamp(2rem, 5vw, 3.5rem);
 }
 
 /* Home Section */
@@ -72,7 +19,7 @@ h1 {
     align-items: center;
     justify-content: center;
     gap: 4rem;
-    margin-top: 12rem; /* Adjusted to move text lower */
+    margin-top: 20rem; /* Move the home section content downward */
 }
 
 .home-content h1 {
@@ -86,43 +33,36 @@ h1 {
     margin-bottom: 1.5rem;
 }
 
-.home-img img {
-    width: clamp(40%, 60vw, 70%);
-    border-radius: 50%;
-    box-shadow: 0 0 20px #b74b4b;
-}
-
-/* Social Media Icons */
-.social-icons {
+/* About Section */
+.about {
     display: flex;
-    gap: 1.5rem;
-    margin-top: 2rem;
+    justify-content: space-between;
+    padding: 4rem 10%;
+    margin-top: 10rem; /* Adjusted to move the section lower */
 }
 
-.social-icons a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: clamp(3rem, 5vw, 4rem);
-    height: clamp(3rem, 5vw, 4rem);
-    border: 0.2rem solid #b74b4b;
-    color: #b74b4b;
-    font-size: clamp(1.4rem, 2.5vw, 2rem);
-    border-radius: 50%;
-    transition: 0.3s ease;
+.about-img {
+    width: 50%;
 }
 
-.social-icons a:hover {
-    background-color: #b74b4b;
-    color: white;
-    box-shadow: 0 0 20px #b74b4b;
-    transform: scale(1.1);
+.about-content {
+    width: 50%;
+}
+
+.about-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about-content p {
+    font-size: 1rem;
+    line-height: 1.8;
 }
 
 /* Hire Me Section */
 .hire-me {
     background-color: #e63946;
-    padding: 5rem 10%;
+    padding: 10rem 10%; /* Increased padding-top to move content lower */
     color: white;
     text-align: center;
     border-radius: 12px;
@@ -131,105 +71,82 @@ h1 {
     position: relative;
 }
 
-.hire-container {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.hire-title {
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    color: white;
-}
-
-.hire-text {
-    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-    margin-bottom: 2rem;
-    color: #f1f1f1;
-    line-height: 1.6;
-}
-
-/* Buttons Container */
-.hire-btns {
+/* Skills Section */
+.skills {
     display: flex;
-    justify-content: center;
-    gap: 3rem;
-    margin-top: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 4rem 10%;
+    margin-top: 10rem; /* Adjusted to move the section lower */
 }
 
-/* General Button Styling */
-.btn {
-    display: inline-block;
-    padding: clamp(1rem, 2vw, 1.5rem) clamp(2rem, 4vw, 3rem);
-    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
-    font-weight: 600;
-    border-radius: 50px;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    text-decoration: none;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* View My Work Button */
-.view-work-btn {
-    background-color: white;
-    color: #e63946;
-}
-
-.view-work-btn:hover {
-    background-color: #e63946;
-    color: white;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-    transform: scale(1.05);
-}
-
-.view-work-btn:active {
-    transform: scale(0.98);
-}
-
-/* Hire Me Button */
-.hire-me-btn {
-    background-color: #f1faee;
-    color: #1d3557;
-}
-
-.hire-me-btn:hover {
-    background-color: #1d3557;
-    color: white;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-    transform: scale(1.05);
-}
-
-.hire-me-btn:active {
-    transform: scale(0.98);
-}
-
-/* Want to Work Together Section */
-.want-to-work {
-    background-color: #f1faee;
-    padding: 5rem 10%;
-    color: #1d3557;
-    text-align: center;
-    border-radius: 12px;
-    margin: 3rem 0;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-}
-
-.want-to-work h2 {
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    margin-bottom: 1.5rem;
-}
-
-.want-to-work p {
-    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+.skill {
+    background-color: #fff;
+    width: 23%;
     margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.skill h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.skill .progress-bar {
+    background-color: #f1f1f1;
+    height: 8px;
+    border-radius: 8px;
+}
+
+.skill .progress-bar span {
+    display: block;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.skill .progress-bar .html {
+    width: 80%;
+    background-color: #f39c12;
+}
+
+.skill .progress-bar .css {
+    width: 70%;
+    background-color: #2ecc71;
+}
+
+.skill .progress-bar .js {
+    width: 60%;
+    background-color: #e74c3c;
+}
+
+/* Experience Section */
+.experience {
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem 10%;
+    margin-top: 10rem; /* Adjusted to move the section lower */
+}
+
+.experience-item {
+    width: 30%;
+}
+
+.experience-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.experience-item p {
+    font-size: 1rem;
+    line-height: 1.8;
 }
 
 /* Contact Section */
 .contact {
     background-color: #1d3557;
-    padding: 6rem 10%;
+    padding: 8rem 10%; /* Increased padding-top to move content lower */
     text-align: center;
     color: white;
     border-radius: 12px;
@@ -237,68 +154,46 @@ h1 {
     margin: 3rem 0;
 }
 
-.contact h1 {
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    color: #e63946;
-    margin-bottom: 1.5rem;
-}
-
-.contact p {
-    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-    margin-bottom: 2rem;
-    color: #f1f1f1;
-}
-
-.contact-info {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 2rem;
-    margin-bottom: 4rem;
-}
-
-.contact-item h3 {
-    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
-    color: #b74b4b;
+.contact h2 {
+    font-size: 2rem;
     margin-bottom: 1rem;
 }
 
-.contact-item p {
-    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+.contact p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
 }
 
-.contact-item a {
-    color: #f1f1f1;
-    text-decoration: none;
-}
-
-.contact-item a:hover {
-    color: #e63946;
-    font-weight: bold;
-}
-
-.social-icons {
+.contact .contact-info {
     display: flex;
-    gap: 1rem;
-    justify-content: center;
+    justify-content: space-between;
 }
 
-.social-icons a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 3rem;
-    height: 3rem;
-    border: 2px solid #e63946;
-    color: #e63946;
-    border-radius: 50%;
-    transition: 0.3s ease;
+.contact .contact-info div {
+    width: 30%;
 }
 
-.social-icons a:hover {
-    background-color: #e63946;
+.contact .contact-info i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.contact .contact-info p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
     color: white;
-    transform: scale(1.1);
-    box-shadow: 0 0 10px #e63946;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 10rem; /* Adjusted to move the footer lower */
+}
+
+footer p {
+    font-size: 1rem;
 }
 
 
