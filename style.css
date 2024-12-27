@@ -1,126 +1,344 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
-/* General Styles */
-body {
-    font-family: 'Arial', sans-serif;
+/* Global Reset and Basic Styling */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: linear-gradient(135deg, #1d3557, #457b9d); /* Dark Blue gradient background */
-    color: #f1faee; /* Light text color for contrast */
-}
-
-/* Header Styles */
-header {
-    background-color: #1d3557; /* Matching the logo color */
-    padding: 1rem 0;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for the header */
-}
-
-header .logo {
-    font-size: 2rem;
-    color: #f1faee; /* Light text for the logo */
     text-decoration: none;
-    letter-spacing: 2px;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+    color: white;
+    line-height: 1.6;
+    overflow-x: hidden;
+    padding: clamp(1rem, 2%, 8rem) clamp(2%, 5%, 10%);
+    padding-top: 6rem; /* Add space to prevent overlap with fixed header */
+}
+
+/* Header Section */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #b74b4b;
+}
+
+nav {
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+    color: white;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: #b74b4b;
     font-weight: bold;
 }
 
-header nav a {
-    margin: 0 1rem;
-    color: #f1faee; /* Light text color */
-    text-decoration: none;
-    font-size: 1.1rem;
-    transition: color 0.3s ease;
+/* All h1 elements */
+h1 {
+    color: #b74b4b; /* Set color to match the logo */
+    font-size: clamp(2rem, 5vw, 3.5rem);
 }
 
-header nav a:hover {
-    color: #e63946; /* Red color on hover for a nice contrast */
-}
-
-/* Hero Section */
+/* Home Section */
 .home {
-    background: linear-gradient(135deg, rgba(29, 53, 87, 0.8), rgba(69, 123, 157, 0.8)); /* Gradient for the hero section */
-    color: #fff;
-    text-align: center;
-    padding: 100px 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 12rem; /* Increase space to prevent overlap with header */
 }
 
-.hero-content h1 {
-    font-size: clamp(2.5rem, 5vw, 4rem);
+.home-content h1 {
+    font-size: clamp(2.5rem, 4vw, 3.2rem);
     margin-bottom: 1rem;
 }
 
-.hero-content h2 {
-    font-size: clamp(1.2rem, 3vw, 2rem);
-    margin-bottom: 2rem;
+.typing-text {
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+    color: #b74b4b;
+    margin-bottom: 1.5rem;
 }
 
-/* Section Styles (Education, Skills, Experience, etc.) */
-section {
-    padding: 50px 20px;
+.home-img img {
+    width: clamp(40%, 60vw, 70%);
+    border-radius: 50%;
+    box-shadow: 0 0 20px #b74b4b;
+}
+
+/* Social Media Icons */
+.social-icons {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: clamp(3rem, 5vw, 4rem);
+    height: clamp(3rem, 5vw, 4rem);
+    border: 0.2rem solid #b74b4b;
+    color: #b74b4b;
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    border-radius: 50%;
+    transition: 0.3s ease;
+}
+
+.social-icons a: hover {
+    background-color: #b74b4b;
+    color: white;
+    box-shadow: 0 0 20px #b74b4b;
+    transform: scale(1.1);
+}
+
+/* Hire Me Section */
+.hire-me {
+    background-color: #e63946;
+    padding: 5rem 10%;
+    color: white;
     text-align: center;
+    border-radius: 12px;
+    margin: 3rem 0;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.hire-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hire-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.hire-text {
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+    margin-bottom: 2rem;
+    color: #f1f1f1;
+    line-height: 1.6;
+}
+
+/* Buttons Container */
+.hire-btns {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+/* General Button Styling */
+.btn {
+    display: inline-block;
+    padding: clamp(1rem, 2vw, 1.5rem) clamp(2rem, 4vw, 3rem);
+    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* View My Work Button */
+.view-work-btn {
+    background-color: white;
+    color: #e63946;
+}
+
+.view-work-btn:hover {
+    background-color: #e63946;
+    color: white;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.view-work-btn:active {
+    transform: scale(0.98);
+}
+
+/* Hire Me Button */
+.hire-me-btn {
     background-color: #f1faee;
     color: #1d3557;
 }
 
-h1 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #1d3557;
-}
-
-p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #333;
-}
-
-/* Footer Styles (Social Icons) */
-footer {
+.hire-me-btn:hover {
     background-color: #1d3557;
-    padding: 1rem 0;
+    color: white;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.hire-me-btn:active {
+    transform: scale(0.98);
+}
+
+/* Want to Work Together Section */
+.want-to-work {
+    background-color: #f1faee;
+    padding: 5rem 10%;
+    color: #1d3557;
     text-align: center;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    margin: 3rem 0;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.want-to-work h2 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 1.5rem;
+}
+
+.want-to-work p {
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+    margin-bottom: 2rem;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #1d3557;
+    padding: 6rem 10%;
+    text-align: center;
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    margin: 3rem 0;
+}
+
+.contact h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: #e63946;
+    margin-bottom: 1.5rem;
+}
+
+.contact p {
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+    margin-bottom: 2rem;
+    color: #f1f1f1;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.contact-item h3 {
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+    color: #b74b4b;
+    margin-bottom: 1rem;
+}
+
+.contact-item p {
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+}
+
+.contact-item a {
+    color: #f1f1f1;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    color: #e63946;
+    font-weight: bold;
 }
 
 .social-icons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    border: 2px solid #e63946;
+    color: #e63946;
+    border-radius: 50%;
+    transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: #e63946;
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #e63946;
+}
+
+/* Form Styling */
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+form input, form textarea {
+    padding: 1rem;
+    font-size: 1.6rem;
+    border-radius: 8px;
+    border: 1px solid #f1f1f1;
+    background-color: #f1f1f1;
+    color: #333;
+    width: 100%;
+}
+
+form input[type="submit"] {
+    background-color: #e63946;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #b74b4b;
+}
+
+/* Footer Section */
+footer {
+    text-align: center;
+    padding: 3rem 0;
+    background-color: #333;
+    color: white;
+    font-size: 1.6rem;
+}
+
+footer p {
     margin: 0;
-    padding: 0;
-}
-
-.social-icons .social-icon {
-    color: #fff;
-    font-size: 2rem;
-    margin: 0 1rem;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.social-icons .social-icon:hover {
-    color: #e63946; /* Red color on hover */
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    header .logo {
-        font-size: 1.5rem;
-    }
-
-    header nav a {
-        font-size: 1rem;
-    }
-
-    .hero-content h1 {
-        font-size: 3rem;
-    }
-
-    .hero-content h2 {
-        font-size: 1.5rem;
-    }
-
-    .social-icons .social-icon {
-        font-size: 1.5rem;
-    }
 }
