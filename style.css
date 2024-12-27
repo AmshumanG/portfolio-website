@@ -270,8 +270,10 @@ h1 {
 .contact {
     padding: 4rem 10%;
     margin-top: 6rem; /* Adds spacing after the header */
-    background-color: #e63946; /* Match with Experience section */
-    color: white;
+    background-color: #f1faee;
+    color: #1d3557;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
     border-radius: 12px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
