@@ -2,13 +2,14 @@
 
 /* Global Reset and Basic Styling */
 * {
-    margin: 0;
+    margin: 12px;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     border: none;
     outline: none;
     font-family: 'Poppins', sans-serif;
+    align-content:center;
 }
 
 html {
