@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
-
-/* Global Reset and Basic Styling */
+/* Global text size adjustment */
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +11,7 @@
 }
 
 html {
-    font-size: 62.5%; /* 1rem = 10px */
+    font-size: 60%; /* Reduces the base font size */
     scroll-behavior: smooth;
 }
 
@@ -21,7 +20,7 @@ body {
     color: white;
     line-height: 1.6;
     overflow-x: hidden;
-    padding: clamp(1rem, 2%, 8rem) clamp(2%, 5%, 10%);
+    padding: clamp(1rem, 2%, 6rem) clamp(2%, 5%, 8%); /* Adjust padding */
 }
 
 /* Header Section */
@@ -39,31 +38,15 @@ header {
 }
 
 .logo {
-    font-size: 2.5rem;
+    font-size: 2.2rem; /* Slightly smaller */
     font-weight: bold;
     color: #b74b4b;
-}
-
-nav {
-    display: flex;
-    gap: 2rem;
 }
 
 nav a {
-    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+    font-size: clamp(1.1rem, 2.2vw, 1.6rem); /* Slightly smaller font */
     color: white;
     transition: 0.3s ease;
-}
-
-nav a:hover {
-    color: #b74b4b;
-    font-weight: bold;
-}
-
-/* All h1 elements */
-h1 {
-    color: #b74b4b; /* Set color to match the logo */
-    font-size: clamp(2rem, 5vw, 3.5rem);
 }
 
 /* Home Section */
@@ -71,166 +54,42 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 4rem;
-    margin-top: 10rem; /* To prevent overlap with the header */
+    gap: 3rem; /* Slightly reduced gap */
+    margin-top: 10rem;
 }
 
 .home-content h1 {
-    font-size: clamp(2.5rem, 4vw, 3.2rem);
-    margin-bottom: 1rem;
+    font-size: clamp(2.2rem, 3.5vw, 2.8rem); /* Slightly smaller h1 */
 }
 
 .typing-text {
-    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-    color: #b74b4b;
-    margin-bottom: 1.5rem;
-}
-
-.home-img img {
-    width: clamp(40%, 60vw, 70%);
-    border-radius: 50%;
-    box-shadow: 0 0 20px #b74b4b;
-}
-
-/* Social Media Icons */
-.social-icons {
-    display: flex;
-    gap: 1.5rem;
-    margin-top: 2rem;
-}
-
-.social-icons a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: clamp(3rem, 5vw, 4rem);
-    height: clamp(3rem, 5vw, 4rem);
-    border: 0.2rem solid #b74b4b;
-    color: #b74b4b;
-    font-size: clamp(1.4rem, 2.5vw, 2rem);
-    border-radius: 50%;
-    transition: 0.3s ease;
-}
-
-.social-icons a: hover {
-    background-color: #b74b4b;
-    color: white;
-    box-shadow: 0 0 20px #b74b4b;
-    transform: scale(1.1);
-}
-
-/* Hire Me Section */
-.hire-me {
-    background-color: #e63946;
-    padding: 5rem 10%;
-    color: white;
-    text-align: center;
-    border-radius: 12px;
-    margin: 3rem 0;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    position: relative;
-}
-
-.hire-container {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.hire-title {
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    color: white;
-}
-
-.hire-text {
-    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-    margin-bottom: 2rem;
-    color: #f1f1f1;
-    line-height: 1.6;
-}
-
-/* Buttons Container */
-.hire-btns {
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-    margin-top: 2rem;
-}
-
-/* General Button Styling */
-.btn {
-    display: inline-block;
-    padding: clamp(1rem, 2vw, 1.5rem) clamp(2rem, 4vw, 3rem);
-    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
-    font-weight: 600;
-    border-radius: 50px;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    text-decoration: none;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* View My Work Button */
-.view-work-btn {
-    background-color: white;
-    color: #e63946;
-}
-
-.view-work-btn:hover {
-    background-color: #e63946;
-    color: white;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-    transform: scale(1.05);
-}
-
-.view-work-btn:active {
-    transform: scale(0.98);
-}
-
-/* Hire Me Button */
-.hire-me-btn {
-    background-color: #f1faee;
-    color: #1d3557;
-}
-
-.hire-me-btn:hover {
-    background-color: #1d3557;
-    color: white;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-    transform: scale(1.05);
-}
-
-.hire-me-btn:active {
-    transform: scale(0.98);
+    font-size: clamp(1.1rem, 2.2vw, 1.6rem); /* Adjusted typing text size */
 }
 
 /* Want to Work Together Section */
 .want-to-work {
     background-color: #f1faee;
-    padding: 5rem 10%;
+    padding: 4rem 8%;
     color: #1d3557;
-    text-align: center;
+    text-align: justify; /* Added justify for this section */
     border-radius: 12px;
     margin: 3rem 0;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 .want-to-work h2 {
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    margin-bottom: 1.5rem;
+    font-size: clamp(1.8rem, 4vw, 2.8rem); /* Slightly smaller */
 }
 
 .want-to-work p {
-    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-    margin-bottom: 2rem;
+    font-size: clamp(1.1rem, 2.3vw, 1.7rem); /* Adjusted paragraph text size */
 }
 
 /* Contact Section */
 .contact {
     background-color: #1d3557;
-    padding: 6rem 10%;
-    text-align: center;
+    padding: 5rem 8%; /* Reduced padding */
+    text-align: justify; /* Justified text */
     color: white;
     border-radius: 12px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
@@ -238,67 +97,13 @@ h1 {
 }
 
 .contact h1 {
-    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-size: clamp(1.8rem, 4vw, 2.6rem); /* Slightly reduced font-size */
     color: #e63946;
     margin-bottom: 1.5rem;
 }
 
 .contact p {
-    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-    margin-bottom: 2rem;
-    color: #f1f1f1;
-}
-
-.contact-info {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 2rem;
-    margin-bottom: 4rem;
-}
-
-.contact-item h3 {
-    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
-    color: #b74b4b;
-    margin-bottom: 1rem;
-}
-
-.contact-item p {
-    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
-}
-
-.contact-item a {
-    color: #f1f1f1;
-    text-decoration: none;
-}
-
-.contact-item a:hover {
-    color: #e63946;
-    font-weight: bold;
-}
-
-.social-icons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-}
-
-.social-icons a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 3rem;
-    height: 3rem;
-    border: 2px solid #e63946;
-    color: #e63946;
-    border-radius: 50%;
-    transition: 0.3s ease;
-}
-
-.social-icons a:hover {
-    background-color: #e63946;
-    color: white;
-    transform: scale(1.1);
-    box-shadow: 0 0 10px #e63946;
+    font-size: clamp(1.1rem, 2.3vw, 1.6rem); /* Adjusted paragraph text size */
 }
 
 /* Form Styling */
@@ -317,35 +122,11 @@ form {
 form input,
 form textarea {
     padding: 1rem;
-    font-size: 1.6rem;
-    border: 2px solid #1d3557;
-    border-radius: 8px;
-    background-color: #fff;
-}
-
-form input:focus,
-form textarea:focus {
-    border-color: #b74b4b;
-    outline: none;
+    font-size: 1.4rem; /* Slightly reduced font-size */
 }
 
 form button {
-    background-color: #1d3557;
-    color: white;
-    padding: 1.2rem;
-    font-size: 1.6rem;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-
-form button:hover {
-    background-color: #b74b4b;
-}
-
-form button:active {
-    transform: scale(0.98);
+    font-size: 1.4rem; /* Adjusted button text size */
 }
 
 /* Responsive Design */
