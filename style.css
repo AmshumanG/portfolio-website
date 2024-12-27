@@ -2,8 +2,8 @@
 
 /* Global Reset and Basic Styling */
 * {
-    margin: 25px;
-    padding: 10px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     border: none;
@@ -12,7 +12,7 @@
 }
 
 html {
-    font-size: 62.5%; /* 1rem = 10px */
+    font-size: 40%; /* 1rem = 10px */
     scroll-behavior: smooth;
 }
 
