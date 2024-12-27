@@ -17,8 +17,8 @@ html {
 }
 
 body {
-    background-color: black;
-    color: white;
+    background-color: #f1f1f1;
+    color: #333;
     line-height: 1.6;
     overflow-x: hidden;
     padding: clamp(1rem, 2%, 8rem) clamp(2%, 5%, 10%);
@@ -41,7 +41,7 @@ header {
 .logo {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #b74b4b;
+    color: #e63946; /* Color scheme applied here */
 }
 
 nav {
@@ -56,13 +56,13 @@ nav a {
 }
 
 nav a:hover {
-    color: #b74b4b;
+    color: #e63946; /* Hover color for consistency */
     font-weight: bold;
 }
 
 /* All h1 elements */
 h1 {
-    color: #b74b4b; /* Set color to match the logo */
+    color: #e63946; /* Matching logo color */
     font-size: clamp(2rem, 5vw, 3.5rem);
 }
 
@@ -82,14 +82,14 @@ h1 {
 
 .typing-text {
     font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-    color: #b74b4b;
+    color: #e63946; /* Consistent color pattern */
     margin-bottom: 1.5rem;
 }
 
 .home-img img {
     width: clamp(40%, 60vw, 70%);
     border-radius: 50%;
-    box-shadow: 0 0 20px #b74b4b;
+    box-shadow: 0 0 20px #e63946; /* Color scheme applied here */
 }
 
 /* Social Media Icons */
@@ -105,70 +105,63 @@ h1 {
     align-items: center;
     width: clamp(3rem, 5vw, 4rem);
     height: clamp(3rem, 5vw, 4rem);
-    border: 0.2rem solid #b74b4b;
-    color: #b74b4b;
+    border: 0.2rem solid #e63946; /* Consistent border color */
+    color: #e63946;
     font-size: clamp(1.4rem, 2.5vw, 2rem);
     border-radius: 50%;
     transition: 0.3s ease;
 }
 
 .social-icons a:hover {
-    background-color: #b74b4b;
+    background-color: #e63946;
     color: white;
-    box-shadow: 0 0 20px #b74b4b;
+    box-shadow: 0 0 20px #e63946; /* Hover effect with same color */
     transform: scale(1.1);
+}
+
+/* Sections */
+section {
+    padding: 4rem 10%;
+    margin-top: 6rem; /* Spacing between sections */
+    background-color: white;
+    color: #333;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Education Section */
 .education {
-    padding: 4rem 10%;
-    margin-top: 6rem; /* Adds spacing after the header */
-    background-color: #f1faee;
-    color: #1d3557;
-    border-radius: 12px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    color: #333;
 }
 
 /* Experience Section */
 .experience {
-    padding: 4rem 10%;
-    margin-top: 6rem; /* Adds spacing after the header */
-    background-color: #e63946;
-    color: white;
-    border-radius: 12px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    color: #333;
 }
 
 /* Skills Section */
 .skills {
-    padding: 4rem 10%;
-    margin-top: 6rem; /* Adds spacing after the header */
-    background-color: #f1faee;
-    color: #1d3557;
-    border-radius: 12px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    color: #333;
 }
 
 /* Projects Section */
 .projects {
-    padding: 4rem 10%;
-    margin-top: 6rem; /* Adds spacing after the header */
-    background-color: #e63946;
-    color: white;
-    border-radius: 12px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    color: #333;
 }
 
 /* Hire Me Section */
 .hire-me {
-    background-color: #e63946;
+    background-color: #e63946; /* Consistent color pattern */
     padding: 5rem 10%;
     color: white;
     text-align: center;
     border-radius: 12px;
     margin: 3rem 0;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    position: relative;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
 .hire-container {
@@ -214,7 +207,7 @@ h1 {
 /* View My Work Button */
 .view-work-btn {
     background-color: white;
-    color: #e63946;
+    color: #e63946; /* Matching color */
 }
 
 .view-work-btn:hover {
@@ -253,7 +246,7 @@ h1 {
     text-align: center;
     border-radius: 12px;
     margin: 3rem 0;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
 .want-to-work h2 {
@@ -268,18 +261,18 @@ h1 {
 
 /* Contact Section */
 .contact {
-    background-color: #1d3557;
+    background-color: #e63946; /* Consistent color pattern */
     padding: 6rem 10%;
     text-align: center;
     color: white;
     border-radius: 12px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
     margin: 3rem 0;
 }
 
 .contact h1 {
     font-size: clamp(2rem, 5vw, 3.5rem);
-    color: #e63946;
+    color: white;
     margin-bottom: 1.5rem;
 }
 
