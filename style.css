@@ -72,7 +72,7 @@ h1 {
     align-items: center;
     justify-content: center;
     gap: 4rem;
-    margin-top: 12rem; /* Adjusted to move text lower */
+    margin-top: 10rem; /* To prevent overlap with the header */
 }
 
 .home-content h1 {
@@ -301,3 +301,44 @@ h1 {
     box-shadow: 0 0 10px #e63946;
 }
 
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form input,
+form textarea {
+    padding: 1.5rem;
+    border: 2px solid #e63946;
+    border-radius: 10px;
+    font-size: 1.6rem;
+    color: #1d3557;
+    background-color: transparent;
+    transition: 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #e63946;
+    outline: none;
+}
+
+form button {
+    padding: 1.5rem;
+    background-color: #e63946;
+    color: white;
+    font-size: 1.6rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border: none;
+}
+
+form button:hover {
+    background-color: #1d3557;
+    box-shadow: 0 0 10px #e63946;
+}
