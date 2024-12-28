@@ -143,8 +143,8 @@ h1 {
 .skills {
     padding: 4rem 10%;
     margin-top: 6rem; /* Adds spacing after the header */
-    background-color: #f1faee;
-    color: #1d3557;
+    background-color: #f1faee; /* Light background */
+    color: #1d3557; /* Dark text */
     border-radius: 12px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
@@ -268,13 +268,12 @@ h1 {
 
 /* Contact Section */
 .contact {
+    padding: 4rem 10%;
+    margin-top: 6rem; /* Adds spacing after the header */
     background-color: #f1faee; /* Light background */
-    padding: 6rem 10%;
-    text-align: center;
     color: #1d3557; /* Dark text */
     border-radius: 12px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    margin: 3rem 0;
 }
 
 .contact h1 {
