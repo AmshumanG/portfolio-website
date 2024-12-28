@@ -21,50 +21,12 @@ body {
     color: white;
     line-height: 1.6;
     overflow-x: hidden;
-    padding: 0;
+    padding: clamp(1rem, 2%, 8rem) clamp(2%, 5%, 10%);
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     flex-direction: column;
-}
-
-/* Index Page Content Styling */
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
-    animation: fadeIn 2s ease-out;
-}
-
-.welcome-content h1 {
-    color: #b74b4b; /* Set color to match the logo */
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    opacity: 0;
-    animation: fadeInText 2s ease-out forwards;
-}
-
-/* Animation for Content */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeInText {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 /* Header Section */
@@ -109,16 +71,298 @@ h1 {
     font-size: clamp(2rem, 5vw, 3.5rem);
 }
 
-/* Other sections (Education, Skills, Experience, etc.) are not modified */
+/* Main Section (Index Page) */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; /* Center the content vertically */
+    text-align: center;
+    animation: fadeIn 2s ease-in-out; /* Add animation for the main content */
+}
 
-/* Footer */
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
+.welcome-content {
+    animation: slideUp 1.5s ease-out; /* Animation for content appearance */
+}
+
+/* Animation for index page content */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Home Section */
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 12rem; /* Increased to avoid overlap with the header */
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    flex-direction: column;
+}
+
+.home-content h1 {
+    font-size: clamp(2.5rem, 4vw, 3.2rem);
+    margin-bottom: 1rem;
+}
+
+.typing-text {
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+    color: #b74b4b;
+    margin-bottom: 1.5rem;
+}
+
+.home-img img {
+    width: clamp(40%, 60vw, 70%);
+    border-radius: 50%;
+    box-shadow: 0 0 20px #b74b4b;
+}
+
+/* Social Media Icons */
+.social-icons {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: clamp(3rem, 5vw, 4rem);
+    height: clamp(3rem, 5vw, 4rem);
+    border: 0.2rem solid #b74b4b;
+    color: #b74b4b;
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    border-radius: 50%;
+    transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: #b74b4b;
+    color: white;
+    box-shadow: 0 0 20px #b74b4b;
+    transform: scale(1.1);
+}
+
+/* Common Section Styling (Education, Experience, Skills, Projects, Contact) */
+section {
+    padding: 4rem 10%;
+    margin-top: 6rem; /* Adds spacing after the header */
+    background-color: #f1faee; /* Light background */
+    color: #1d3557; /* Dark text */
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Hire Me Section */
+.hire-me {
+    background-color: #e63946;
+    padding: 5rem 10%;
     color: white;
     text-align: center;
-    padding: 1rem;
+    border-radius: 12px;
+    margin: 3rem 0;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hire-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hire-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.hire-text {
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+    margin-bottom: 2rem;
+    color: #f1f1f1;
+    line-height: 1.6;
+}
+
+/* Buttons Container */
+.hire-btns {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+/* General Button Styling */
+.btn {
+    display: inline-block;
+    padding: clamp(1rem, 2vw, 1.5rem) clamp(2rem, 4vw, 3rem);
+    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* View My Work Button */
+.view-work-btn {
+    background-color: white;
+    color: #e63946;
+}
+
+.view-work-btn:hover {
+    background-color: #e63946;
+    color: white;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.view-work-btn:active {
+    transform: scale(0.98);
+}
+
+/* Hire Me Button */
+.hire-me-btn {
+    background-color: #f1faee;
+    color: #1d3557;
+}
+
+.hire-me-btn:hover {
+    background-color: #1d3557;
+    color: white;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.hire-me-btn:active {
+    transform: scale(0.98);
+}
+
+/* Want to Work Together Section */
+.want-to-work {
+    background-color: #f1faee;
+    padding: 5rem 10%;
+    color: #1d3557;
+    text-align: center;
+    border-radius: 12px;
+    margin: 3rem 0;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.want-to-work h2 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 1.5rem;
+}
+
+.want-to-work p {
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+    margin-bottom: 2rem;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #f1faee; /* Light background */
+    padding: 6rem 10%;
+    text-align: center;
+    color: #1d3557; /* Dark text */
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    margin-top: 4rem;
+}
+
+.contact h2 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 2rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    background-color: #e63946;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.6rem;
+}
+
+.contact-form button {
+    background-color: #e63946;
+    padding: 1.5rem 2rem;
+    border-radius: 50px;
+    color: white;
+    font-size: 1.8rem;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #1d3557;
+}
+
+/* Footer Section */
+footer {
+    background-color: #1d3557;
+    color: white;
+    padding: 3rem 5%;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1.6rem;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .home-img img {
+        width: 80%;
+    }
+
+    .social-icons a {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .hire-btns {
+        flex-direction: column;
+    }
 }
