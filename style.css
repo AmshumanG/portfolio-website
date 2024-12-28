@@ -22,11 +22,6 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     padding: clamp(1rem, 2%, 8rem) clamp(2%, 5%, 10%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    flex-direction: column;
 }
 
 /* Header Section */
@@ -78,9 +73,6 @@ h1 {
     justify-content: center;
     gap: 4rem;
     margin-top: 12rem; /* Increased to avoid overlap with the header */
-    width: 100%;
-    text-align: center;
-    flex-direction: column;
 }
 
 .home-content h1 {
@@ -127,26 +119,6 @@ h1 {
     transform: scale(1.1);
 }
 
-/* Welcome Content (Centered) */
-.welcome-content {
-    text-align: center;
-    margin-top: 20vh; /* Adjusted to make the text more centered */
-}
-
-.welcome-content h1 {
-    font-size: clamp(2.5rem, 5vw, 3.5rem);
-}
-
-/* Footer Section */
-footer {
-    text-align: center;
-    color: white;
-    padding: 1rem 0;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-
 /* Common Section Styling (Education, Experience, Skills, Projects, Contact) */
 section {
     padding: 4rem 10%;
@@ -155,10 +127,6 @@ section {
     color: #1d3557; /* Dark text */
     border-radius: 12px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 
 /* Hire Me Section */
@@ -171,10 +139,6 @@ section {
     margin: 3rem 0;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 
 .hire-container {
@@ -260,10 +224,6 @@ section {
     border-radius: 12px;
     margin: 3rem 0;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 
 .want-to-work h2 {
@@ -287,31 +247,6 @@ section {
     margin: 3rem 0;
 }
 
-.contact input,
-.contact textarea {
-    width: 100%;
-    padding: 1.2rem;
-    font-size: 1.6rem;
-    border-radius: 8px;
-    margin-bottom: 1.5rem;
-    border: 1px solid #ddd;
-}
-
-.contact button {
-    padding: 1.2rem 3rem;
-    font-size: 1.6rem;
-    background-color: #e63946;
-    color: white;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-}
-
-.contact button:hover {
-    background-color: #b74b4b;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
-
-.contact button:active {
-    transform: scale(0.98);
+.contact h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
 }
