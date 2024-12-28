@@ -17,8 +17,8 @@ html {
 }
 
 body {
-    background-color: black;
-    color: white;
+    background-color: #f1faee; /* Light background theme */
+    color: #1d3557; /* Dark text color */
     line-height: 1.6;
     overflow-x: hidden;
     padding: clamp(1rem, 2%, 8rem) clamp(2%, 5%, 10%);
@@ -30,7 +30,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+    background-color: rgba(0, 0, 0, 0.8);
     padding: 1rem 5%;
     display: flex;
     justify-content: space-between;
@@ -60,36 +60,31 @@ nav a:hover {
     font-weight: bold;
 }
 
-/* All h1 elements */
-h1 {
-    color: #b74b4b; /* Set color to match the logo */
-    font-size: clamp(2rem, 5vw, 3.5rem);
-}
-
-/* Home Section */
-.home {
+/* Main Section - Centered Text */
+.welcome-content {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 4rem;
-    margin-top: 12rem; /* Increased to avoid overlap with the header */
+    justify-content: center; /* Horizontally centers the text */
+    align-items: center; /* Vertically centers the text */
+    height: 80vh; /* Adjust height to fit your design */
+    text-align: center; /* Centers text inside the container */
 }
 
-.home-content h1 {
-    font-size: clamp(2.5rem, 4vw, 3.2rem);
-    margin-bottom: 1rem;
+.welcome-content h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: #e63946; /* Use a standout color */
+    animation: fadeIn 1.5s ease-out; /* Apply fade-in animation */
 }
 
-.typing-text {
-    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-    color: #b74b4b;
-    margin-bottom: 1.5rem;
-}
-
-.home-img img {
-    width: clamp(40%, 60vw, 70%);
-    border-radius: 50%;
-    box-shadow: 0 0 20px #b74b4b;
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Start from below */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* End at normal position */
+    }
 }
 
 /* Social Media Icons */
@@ -116,7 +111,7 @@ h1 {
     background-color: #b74b4b;
     color: white;
     box-shadow: 0 0 20px #b74b4b;
-    transform: scale(1.1);
+    transform: scale(1.1); /* Slightly grow the icon */
 }
 
 /* Common Section Styling (Education, Experience, Skills, Projects, Contact) */
@@ -238,10 +233,10 @@ section {
 
 /* Contact Section */
 .contact {
-    background-color: #f1faee; /* Light background */
+    background-color: #f1faee;
     padding: 6rem 10%;
     text-align: center;
-    color: #1d3557; /* Dark text */
+    color: #1d3557;
     border-radius: 12px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
     margin: 3rem 0;
@@ -250,3 +245,16 @@ section {
 .contact h1 {
     font-size: clamp(2rem, 5vw, 3.5rem);
 }
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
