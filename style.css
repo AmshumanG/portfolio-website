@@ -22,7 +22,11 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     padding: clamp(1rem, 2%, 8rem) clamp(2%, 5%, 10%);
-    animation: fadeIn 2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 /* Header Section */
@@ -43,7 +47,6 @@ header {
     font-size: 2.5rem;
     font-weight: bold;
     color: #b74b4b;
-    animation: fadeIn 1.5s ease-in-out;
 }
 
 nav {
@@ -75,13 +78,14 @@ h1 {
     justify-content: center;
     gap: 4rem;
     margin-top: 12rem; /* Increased to avoid overlap with the header */
-    animation: slideUp 1.5s ease-out;
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
 }
 
 .home-content h1 {
     font-size: clamp(2.5rem, 4vw, 3.2rem);
     margin-bottom: 1rem;
-    animation: fadeInText 2s ease-in-out;
 }
 
 .typing-text {
@@ -131,7 +135,10 @@ section {
     color: #1d3557; /* Dark text */
     border-radius: 12px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    animation: fadeIn 2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 /* Hire Me Section */
@@ -144,6 +151,10 @@ section {
     margin: 3rem 0;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .hire-container {
@@ -229,6 +240,10 @@ section {
     border-radius: 12px;
     margin: 3rem 0;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .want-to-work h2 {
@@ -254,34 +269,4 @@ section {
 
 .contact h1 {
     font-size: clamp(2rem, 5vw, 3.5rem);
-}
-
-/* Animations */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeInText {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideUp {
-    0% {
-        transform: translateY(100px);
-    }
-    100% {
-        transform: translateY(0);
-    }
 }
