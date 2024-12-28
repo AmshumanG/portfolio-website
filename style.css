@@ -119,38 +119,8 @@ h1 {
     transform: scale(1.1);
 }
 
-/* Education Section */
-.education {
-    padding: 4rem 10%;
-    margin-top: 6rem; /* Adds spacing after the header */
-    background-color: #f1faee; /* Light background */
-    color: #1d3557; /* Dark text */
-    border-radius: 12px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Experience Section */
-.experience {
-    padding: 4rem 10%;
-    margin-top: 6rem; /* Adds spacing after the header */
-    background-color: #f1faee; /* Light background */
-    color: #1d3557; /* Dark text */
-    border-radius: 12px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Skills Section */
-.skills {
-    padding: 4rem 10%;
-    margin-top: 6rem; /* Adds spacing after the header */
-    background-color: #f1faee; /* Light background */
-    color: #1d3557; /* Dark text */
-    border-radius: 12px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Projects Section */
-.projects {
+/* Common Section Styling (Education, Experience, Skills, Projects, Contact) */
+section {
     padding: 4rem 10%;
     margin-top: 6rem; /* Adds spacing after the header */
     background-color: #f1faee; /* Light background */
@@ -268,13 +238,15 @@ h1 {
 
 /* Contact Section */
 .contact {
-    padding: 4rem 10%;
-    margin-top: 6rem; /* Adds spacing after the header */
     background-color: #f1faee; /* Light background */
+    padding: 6rem 10%;
+    text-align: center;
     color: #1d3557; /* Dark text */
     border-radius: 12px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    margin: 3rem 0;
 }
 
 .contact h1 {
     font-size: clamp(2rem, 5vw, 3.5rem);
+}
