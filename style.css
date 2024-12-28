@@ -270,3 +270,40 @@ section {
 .contact h1 {
     font-size: clamp(2rem, 5vw, 3.5rem);
 }
+
+/* Centered Content with Animation */
+.home-content {
+    text-align: center;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1.5s forwards;
+}
+
+.home-content h1 {
+    font-size: clamp(2.5rem, 4vw, 3.2rem);
+    margin-bottom: 1rem;
+}
+
+.typing-text {
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+    color: #b74b4b;
+    margin-bottom: 1.5rem;
+}
+
+.home-img img {
+    width: clamp(40%, 60vw, 70%);
+    border-radius: 50%;
+    box-shadow: 0 0 20px #b74b4b;
+}
+
+/* Animation for FadeIn and Up Movement */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
