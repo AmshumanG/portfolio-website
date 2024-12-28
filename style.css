@@ -71,41 +71,6 @@ h1 {
     font-size: clamp(2rem, 5vw, 3.5rem);
 }
 
-/* Main Section (Index Page) */
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 80vh; /* Center the content vertically */
-    text-align: center;
-    animation: fadeIn 2s ease-in-out; /* Add animation for the main content */
-}
-
-.welcome-content {
-    animation: slideUp 1.5s ease-out; /* Animation for content appearance */
-}
-
-/* Animation for index page content */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes slideUp {
-    0% {
-        transform: translateY(50px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
 /* Home Section */
 .home {
     display: flex;
@@ -160,6 +125,26 @@ main {
     color: white;
     box-shadow: 0 0 20px #b74b4b;
     transform: scale(1.1);
+}
+
+/* Welcome Content (Centered) */
+.welcome-content {
+    text-align: center;
+    margin-top: 20vh; /* Adjusted to make the text more centered */
+}
+
+.welcome-content h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+}
+
+/* Footer Section */
+footer {
+    text-align: center;
+    color: white;
+    padding: 1rem 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 /* Common Section Styling (Education, Experience, Skills, Projects, Contact) */
@@ -299,70 +284,34 @@ section {
     color: #1d3557; /* Dark text */
     border-radius: 12px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    margin-top: 4rem;
+    margin: 3rem 0;
 }
 
-.contact h2 {
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    margin-bottom: 2rem;
-}
-
-.contact-form input,
-.contact-form textarea {
+.contact input,
+.contact textarea {
     width: 100%;
-    padding: 1.5rem;
-    margin-bottom: 2rem;
+    padding: 1.2rem;
+    font-size: 1.6rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ddd;
+}
+
+.contact button {
+    padding: 1.2rem 3rem;
+    font-size: 1.6rem;
     background-color: #e63946;
     color: white;
     border: none;
-    border-radius: 12px;
-    font-size: 1.6rem;
-}
-
-.contact-form button {
-    background-color: #e63946;
-    padding: 1.5rem 2rem;
     border-radius: 50px;
-    color: white;
-    font-size: 1.8rem;
-    border: none;
     cursor: pointer;
-    transition: 0.3s;
 }
 
-.contact-form button:hover {
-    background-color: #1d3557;
+.contact button:hover {
+    background-color: #b74b4b;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Footer Section */
-footer {
-    background-color: #1d3557;
-    color: white;
-    padding: 3rem 5%;
-    text-align: center;
-}
-
-footer p {
-    font-size: 1.6rem;
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    .home {
-        flex-direction: column;
-        gap: 2rem;
-    }
-
-    .home-img img {
-        width: 80%;
-    }
-
-    .social-icons a {
-        width: 3rem;
-        height: 3rem;
-    }
-
-    .hire-btns {
-        flex-direction: column;
-    }
+.contact button:active {
+    transform: scale(0.98);
 }
