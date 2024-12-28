@@ -22,6 +22,11 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     padding: clamp(1rem, 2%, 8rem) clamp(2%, 5%, 10%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 2s ease-in-out;
 }
 
 /* Header Section */
@@ -66,187 +71,74 @@ h1 {
     font-size: clamp(2rem, 5vw, 3.5rem);
 }
 
-/* Home Section */
-.home {
+/* Main Section */
+main {
     display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 4rem;
-    margin-top: 12rem; /* Increased to avoid overlap with the header */
+    align-items: center;
+    height: 80vh; /* Take up most of the page height */
+    text-align: center;
+    animation: slideUp 1.5s ease-out;
 }
 
-.home-content h1 {
-    font-size: clamp(2.5rem, 4vw, 3.2rem);
+.welcome-content h1 {
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
     margin-bottom: 1rem;
+    animation: fadeInText 2s ease-in-out;
 }
 
-.typing-text {
-    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-    color: #b74b4b;
-    margin-bottom: 1.5rem;
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
-.home-img img {
-    width: clamp(40%, 60vw, 70%);
-    border-radius: 50%;
-    box-shadow: 0 0 20px #b74b4b;
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* Social Media Icons */
-.social-icons {
-    display: flex;
-    gap: 1.5rem;
+@keyframes slideUp {
+    0% {
+        transform: translateY(100px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
     margin-top: 2rem;
+    font-size: 1.2rem;
 }
 
-.social-icons a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: clamp(3rem, 5vw, 4rem);
-    height: clamp(3rem, 5vw, 4rem);
-    border: 0.2rem solid #b74b4b;
+footer p {
     color: #b74b4b;
-    font-size: clamp(1.4rem, 2.5vw, 2rem);
-    border-radius: 50%;
-    transition: 0.3s ease;
 }
 
-.social-icons a:hover {
-    background-color: #b74b4b;
-    color: white;
-    box-shadow: 0 0 20px #b74b4b;
-    transform: scale(1.1);
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 2rem;
+    }
 
-/* Common Section Styling (Education, Experience, Skills, Projects, Contact) */
-section {
-    padding: 4rem 10%;
-    margin-top: 6rem; /* Adds spacing after the header */
-    background-color: #f1faee; /* Light background */
-    color: #1d3557; /* Dark text */
-    border-radius: 12px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-}
+    nav a {
+        font-size: 1.5rem;
+    }
 
-/* Hire Me Section */
-.hire-me {
-    background-color: #e63946;
-    padding: 5rem 10%;
-    color: white;
-    text-align: center;
-    border-radius: 12px;
-    margin: 3rem 0;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    position: relative;
-}
-
-.hire-container {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.hire-title {
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    color: white;
-}
-
-.hire-text {
-    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-    margin-bottom: 2rem;
-    color: #f1f1f1;
-    line-height: 1.6;
-}
-
-/* Buttons Container */
-.hire-btns {
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-    margin-top: 2rem;
-}
-
-/* General Button Styling */
-.btn {
-    display: inline-block;
-    padding: clamp(1rem, 2vw, 1.5rem) clamp(2rem, 4vw, 3rem);
-    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
-    font-weight: 600;
-    border-radius: 50px;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    text-decoration: none;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* View My Work Button */
-.view-work-btn {
-    background-color: white;
-    color: #e63946;
-}
-
-.view-work-btn:hover {
-    background-color: #e63946;
-    color: white;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-    transform: scale(1.05);
-}
-
-.view-work-btn:active {
-    transform: scale(0.98);
-}
-
-/* Hire Me Button */
-.hire-me-btn {
-    background-color: #f1faee;
-    color: #1d3557;
-}
-
-.hire-me-btn:hover {
-    background-color: #1d3557;
-    color: white;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-    transform: scale(1.05);
-}
-
-.hire-me-btn:active {
-    transform: scale(0.98);
-}
-
-/* Want to Work Together Section */
-.want-to-work {
-    background-color: #f1faee;
-    padding: 5rem 10%;
-    color: #1d3557;
-    text-align: center;
-    border-radius: 12px;
-    margin: 3rem 0;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-}
-
-.want-to-work h2 {
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    margin-bottom: 1.5rem;
-}
-
-.want-to-work p {
-    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-    margin-bottom: 2rem;
-}
-
-/* Contact Section */
-.contact {
-    background-color: #f1faee; /* Light background */
-    padding: 6rem 10%;
-    text-align: center;
-    color: #1d3557; /* Dark text */
-    border-radius: 12px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    margin: 3rem 0;
-}
-
-.contact h1 {
-    font-size: clamp(2rem, 5vw, 3.5rem);
+    .welcome-content h1 {
+        font-size: 2.5rem;
+    }
 }
