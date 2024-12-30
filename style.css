@@ -294,64 +294,73 @@ section {
     border-radius: 50px;
     transition: all 0.3s ease;
     cursor: pointer;
-    text-decoration: none;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* View My Work Button */
-.view-work-btn {
-    background-color: white;
-    color: #e63946;
+.btn-primary {
+    background-color: #f1faee;
+    color: #1d3557;
+    border: 2px solid #1d3557;
 }
 
-.view-work-btn:hover {
-    background-color: #e63946;
-    color: white;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+.btn-primary:hover {
+    background-color: #1d3557;
+    color: #f1faee;
     transform: translateY(-5px);
 }
 
-/* Contact Button */
-.contact-btn {
-    background-color: #b74b4b;
-    color: white;
+.btn-secondary {
+    background-color: transparent;
+    color: #1d3557;
+    border: 2px solid #f1faee;
 }
 
-.contact-btn:hover {
-    background-color: #e63946;
-    color: white;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+.btn-secondary:hover {
+    background-color: #f1faee;
+    color: #1d3557;
     transform: translateY(-5px);
 }
 
-/* Footer Section */
-footer {
-    text-align: center;
-    padding: 2rem;
-    background-color: #333;
-    color: white;
-}
-
-footer p {
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: #ddd;
-    margin: 0;
-}
-
-footer a {
-    font-size: 1.4rem;
-    color: #b74b4b;
-}
-
-footer a:hover {
-    color: white;
-}
-
-/* Media Queries */
+/* Mobile and Tablet Adjustments */
 @media screen and (max-width: 768px) {
+    header {
+        padding: 1rem 3%;
+    }
     .home {
         flex-direction: column;
-        text-align: center;
+        gap: 2rem;
+    }
+    .home-img img {
+        width: 80%;
+        margin-top: 2rem;
+    }
+    .index-content h1 {
+        font-size: clamp(2.5rem, 5vw, 3.2rem);
+    }
+    .home-content h1 {
+        font-size: clamp(2.5rem, 5vw, 3.2rem);
+    }
+    .social-icons a {
+        width: 4rem;
+        height: 4rem;
+        font-size: clamp(1.4rem, 2.5vw, 2rem);
+    }
+    .hire-container {
+        width: 100%;
+        padding: 2rem 5%;
+    }
+}
+
+/* Extra Small Mobile Adjustments */
+@media screen and (max-width: 480px) {
+    .social-icons a {
+        width: 3rem;
+        height: 3rem;
+        font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    }
+    .hire-title {
+        font-size: clamp(1.8rem, 5vw, 2.5rem);
+    }
+    .hire-text {
+        font-size: clamp(1rem, 2.5vw, 1.5rem);
     }
 }
