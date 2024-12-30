@@ -129,23 +129,12 @@ h1 {
     margin-bottom: 1.5rem;
 }
 
+/* Removed rotation effect from home image */
 .home-img img {
     width: clamp(40%, 60vw, 70%);
     border-radius: 50%;
     box-shadow: 0 0 20px #b74b4b;
-    animation: rotateIn 2s ease-out; /* Apply rotation animation */
-}
-
-/* Keyframes for rotateIn animation */
-@keyframes rotateIn {
-    0% {
-        opacity: 0;
-        transform: rotate(-360deg);
-    }
-    100% {
-        opacity: 1;
-        transform: rotate(0);
-    }
+    animation: none; /* Remove rotation animation */
 }
 
 /* Social Media Icons */
