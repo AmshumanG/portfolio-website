@@ -29,6 +29,29 @@ body {
     animation: fadeIn 2s ease-out; /* Apply fade-in animation */
 }
 
+/* Center the welcome content */
+.welcome-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Ensures content is centered vertically */
+    text-align: center;
+    animation: fadeSlideIn 2s ease-out; /* Apply animation */
+}
+
+/* Keyframes for animation */
+@keyframes fadeSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Header Section */
 header {
     position: fixed;
@@ -285,84 +308,50 @@ section {
     background-color: #e63946;
     color: white;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-    transform: scale(1.05);
+    transform: translateY(-5px);
 }
 
-.view-work-btn:active {
-    transform: scale(0.98);
+/* Contact Button */
+.contact-btn {
+    background-color: #b74b4b;
+    color: white;
 }
 
-/* Hire Me Button */
-.hire-me-btn {
-    background-color: #f1faee;
-    color: #1d3557;
-}
-
-.hire-me-btn:hover {
-    background-color: #1d3557;
+.contact-btn:hover {
+    background-color: #e63946;
     color: white;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-    transform: scale(1.05);
-}
-
-.hire-me-btn:active {
-    transform: scale(0.98);
+    transform: translateY(-5px);
 }
 
 /* Footer Section */
 footer {
-    background-color: #1d3557;
-    color: white;
-    padding: 2rem 0;
     text-align: center;
-    animation: fadeIn 2s ease-out; /* Apply animation */
+    padding: 2rem;
+    background-color: #333;
+    color: white;
 }
 
 footer p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #ddd;
+    margin: 0;
+}
+
+footer a {
     font-size: 1.4rem;
+    color: #b74b4b;
+}
+
+footer a:hover {
     color: white;
 }
 
-/* Contact Form */
-.contact-form {
-    max-width: 800px;
-    margin: 3rem auto;
-    padding: 3rem;
-    background-color: #f1faee;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    animation: fadeInUp 2s ease-out; /* Apply animation */
-}
-
-.contact-form input, .contact-form textarea {
-    width: 100%;
-    padding: 1.2rem;
-    margin-bottom: 2rem;
-    border-radius: 8px;
-    border: 2px solid #e63946;
-    font-size: 1.4rem;
-    transition: border-color 0.3s ease;
-}
-
-.contact-form input:focus, .contact-form textarea:focus {
-    border-color: #b74b4b;
-}
-
-.contact-form button {
-    background-color: #e63946;
-    color: white;
-    font-size: 1.6rem;
-    padding: 1rem 3rem;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-
-.contact-form button:hover {
-    background-color: #b74b4b;
-}
-
-.contact-form button:active {
-    transform: scale(0.98);
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .home {
+        flex-direction: column;
+        text-align: center;
+    }
 }
