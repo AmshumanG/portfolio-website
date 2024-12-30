@@ -302,44 +302,79 @@ section {
 }
 
 /* Want to Work Together Section */
-.want-to-work {
-    margin-top: 10rem;
+.work-together {
+    margin-top: 5rem;
+    padding: 4rem 10%;
+    background-color: #1d3557;
+    color: white;
     text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
     animation: fadeInUp 2s ease-out; /* Apply animation */
 }
 
-.want-to-work p {
-    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
-    margin-bottom: 2rem;
-}
+/* Media Queries for Responsiveness */
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 3rem;
-    background-color: #1d3557;
-    color: white;
-    font-size: clamp(1rem, 2.5vw, 1.5rem);
-}
-
-footer a {
-    color: #b74b4b;
-    transition: 0.3s ease;
-}
-
-footer a:hover {
-    color: white;
-    text-decoration: underline;
-}
-
-/* Keyframes for smooth fadeIn animations */
-@keyframes fadeInDown {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px);
+/* For tablets and mobile devices */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 1rem 3%;
     }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
+
+    .home {
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 10rem;
+    }
+
+    .home-img img {
+        width: 80%;
+        height: auto;
+    }
+
+    .social-icons {
+        gap: 1rem;
+    }
+
+    section {
+        padding: 2rem 5%;
+    }
+
+    .btn {
+        padding: 1.2rem 2.4rem;
+        font-size: 1.6rem;
+    }
+
+    .work-together {
+        margin-top: 3rem;
+        padding: 3rem 5%;
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+    .home-content h1 {
+        font-size: 2rem;
+    }
+
+    .typing-text {
+        font-size: 1.5rem;
+    }
+
+    .logo {
+        font-size: 2rem;
+    }
+
+    .index-content h1 {
+        font-size: 2.5rem;
+    }
+
+    nav a {
+        font-size: 1.4rem;
+    }
+
+    section {
+        padding: 1.5rem 3%;
     }
 }
