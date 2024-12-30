@@ -1,3 +1,4 @@
+/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 /* Global Reset and Basic Styling */
@@ -78,7 +79,7 @@ h1 {
     font-size: clamp(2rem, 5vw, 3.5rem);
 }
 
-/* Index Page Styling */
+/* Index Page Styling (Center Text on the Index Page) */
 .index-content {
     display: flex;
     flex-direction: column;
@@ -302,79 +303,50 @@ section {
 }
 
 /* Want to Work Together Section */
-.work-together {
-    margin-top: 5rem;
-    padding: 4rem 10%;
-    background-color: #1d3557;
-    color: white;
+.want-to-work {
+    margin-top: 6rem;
+    padding: 3rem;
+    background-color: #f1faee;
     text-align: center;
-    border-radius: 12px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    animation: fadeInUp 2s ease-out; /* Apply animation */
 }
 
-/* Media Queries for Responsiveness */
+/* Footer Section */
+footer {
+    background-color: #1d3557;
+    padding: 2rem 5%;
+    text-align: center;
+    color: white;
+    margin-top: 6rem;
+}
 
-/* For tablets and mobile devices */
+footer p {
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+    color: #b74b4b;
+    margin-top: 1rem;
+}
+
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        padding: 1rem 3%;
-    }
-
     .home {
         flex-direction: column;
         gap: 2rem;
-        margin-top: 10rem;
     }
 
     .home-img img {
         width: 80%;
-        height: auto;
     }
 
-    .social-icons {
-        gap: 1rem;
-    }
-
-    section {
-        padding: 2rem 5%;
-    }
-
-    .btn {
-        padding: 1.2rem 2.4rem;
+    .social-icons a {
+        width: 3.5rem;
+        height: 3.5rem;
         font-size: 1.6rem;
     }
 
-    .work-together {
-        margin-top: 3rem;
-        padding: 3rem 5%;
-    }
-}
-
-/* For mobile devices */
-@media (max-width: 480px) {
-    .home-content h1 {
-        font-size: 2rem;
-    }
-
-    .typing-text {
-        font-size: 1.5rem;
-    }
-
-    .logo {
-        font-size: 2rem;
-    }
-
     .index-content h1 {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 
-    nav a {
-        font-size: 1.4rem;
-    }
-
-    section {
-        padding: 1.5rem 3%;
+    .index-content p {
+        font-size: 1.5rem;
     }
 }
