@@ -1,4 +1,3 @@
-/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 /* Global Reset and Basic Styling */
@@ -42,7 +41,7 @@ header {
 
 .logo {
     font-size: 2.5rem;
-    font-weight: bold; 
+    font-weight: bold;
     color: #b74b4b;
 }
 
@@ -79,7 +78,7 @@ h1 {
     font-size: clamp(2rem, 5vw, 3.5rem);
 }
 
-/* Index Page Styling (Center Text on the Index Page) */
+/* Index Page Styling */
 .index-content {
     display: flex;
     flex-direction: column;
@@ -303,50 +302,45 @@ section {
 }
 
 /* Want to Work Together Section */
-.want-to-work {
-    margin-top: 6rem;
-    padding: 3rem;
-    background-color: #f1faee;
+.work-together {
+    margin-top: 5rem;
+    padding: 4rem 10%;
+    background-color: #1d3557;
+    color: white;
     text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeInRight 2s ease-out;
+}
+
+/* Keyframes for fadeInRight */
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 /* Footer Section */
 footer {
     background-color: #1d3557;
-    padding: 2rem 5%;
-    text-align: center;
     color: white;
-    margin-top: 6rem;
+    text-align: center;
+    padding: 3rem 0;
+    margin-top: 5rem;
+    font-size: 1.2rem;
 }
 
-footer p {
-    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+footer a {
     color: #b74b4b;
-    margin-top: 1rem;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    .home {
-        flex-direction: column;
-        gap: 2rem;
-    }
-
-    .home-img img {
-        width: 80%;
-    }
-
-    .social-icons a {
-        width: 3.5rem;
-        height: 3.5rem;
-        font-size: 1.6rem;
-    }
-
-    .index-content h1 {
-        font-size: 3rem;
-    }
-
-    .index-content p {
-        font-size: 1.5rem;
-    }
+footer a:hover {
+    color: white;
 }
