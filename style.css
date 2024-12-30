@@ -87,7 +87,7 @@ h1 {
     min-height: 100vh; /* Ensures content is centered vertically */
     text-align: center;
     animation: fadeSlideIn 2s ease-out; /* Apply animation */
-    margin-top: 50rem; /* Push content down */
+    margin-top: 10rem; /* Push content down */
 }
 
 /* Keyframes for animation */
@@ -330,9 +330,4 @@ section {
     section {
         padding: 3rem 5%;
     }
-}
-
-
-footer a:hover {
-    color: white;
 }
