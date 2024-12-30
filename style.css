@@ -17,11 +17,16 @@ html {
 }
 
 body {
-    background-color: #121212; /* Dark background for better contrast */
-    color: #f0f0f0; /* Light text color */
+    background-color: black;
+    color: white;
     line-height: 1.6;
     overflow-x: hidden;
     padding: clamp(1rem, 2%, 8rem) clamp(2%, 5%, 10%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 2s ease-out; /* Apply fade-in animation */
 }
 
 /* Header Section */
@@ -30,7 +35,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.9); /* Slightly darker header */
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
     padding: 1rem 5%;
     display: flex;
     justify-content: space-between;
@@ -42,7 +47,7 @@ header {
 .logo {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #00d4ff; /* Cyan for a fresh touch */
+    color: #b74b4b;
 }
 
 nav {
@@ -52,13 +57,13 @@ nav {
 
 nav a {
     font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-    color: #f0f0f0;
+    color: white;
     transition: 0.3s ease;
     animation: fadeIn 1s ease-out;
 }
 
 nav a:hover {
-    color: #00d4ff;
+    color: #b74b4b;
     font-weight: bold;
 }
 
@@ -74,7 +79,7 @@ nav a:hover {
 
 /* All h1 elements */
 h1 {
-    color: #00d4ff; /* Set color to cyan */
+    color: #b74b4b; /* Set color to match the logo */
     font-size: clamp(2rem, 5vw, 3.5rem);
 }
 
@@ -84,10 +89,10 @@ h1 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    min-height: 100vh; /* Ensures content is centered vertically */
     text-align: center;
-    animation: fadeSlideIn 2s ease-out;
-    margin-top: 10rem;
+    animation: fadeSlideIn 2s ease-out; /* Apply animation */
+    margin-top: 10rem; /* Push content down */
 }
 
 /* Keyframes for animation */
@@ -102,14 +107,22 @@ h1 {
     }
 }
 
+/* Add some spacing for child elements if needed */
+.index-content h1,
+.index-content p,
+.index-content a {
+    margin-bottom: 1.5rem; /* Adjust spacing between elements */
+}
+
 /* Home Section */
 .home {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 4rem;
-    margin-top: 12rem;
-    animation: fadeIn 2s ease-out;
+    margin-top: 12rem; /* Increased to avoid overlap with the header */
+    animation: fadeIn 2s ease-out; /* Apply animation */
+    text-align: center;
 }
 
 .home-content h1 {
@@ -119,15 +132,16 @@ h1 {
 
 .typing-text {
     font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-    color: #00d4ff;
+    color: #b74b4b;
     margin-bottom: 1.5rem;
 }
 
-/* Home Image */
+/* Removed rotation effect from home image */
 .home-img img {
     width: clamp(40%, 60vw, 70%);
     border-radius: 50%;
-    box-shadow: 0 0 20px #00d4ff;
+    box-shadow: 0 0 20px #b74b4b;
+    animation: none; /* Remove rotation animation */
 }
 
 /* Social Media Icons */
@@ -135,6 +149,7 @@ h1 {
     display: flex;
     gap: 1.5rem;
     margin-top: 2rem;
+    justify-content: center; /* Center social icons */
 }
 
 .social-icons a {
@@ -143,18 +158,18 @@ h1 {
     align-items: center;
     width: clamp(3rem, 5vw, 4rem);
     height: clamp(3rem, 5vw, 4rem);
-    border: 0.2rem solid #00d4ff;
-    color: #00d4ff;
+    border: 0.2rem solid #b74b4b;
+    color: #b74b4b;
     font-size: clamp(1.4rem, 2.5vw, 2rem);
     border-radius: 50%;
     transition: 0.3s ease;
-    animation: bounce 2s infinite;
+    animation: bounce 2s infinite; /* Add bounce animation */
 }
 
 .social-icons a:hover {
-    background-color: #00d4ff;
-    color: #121212;
-    box-shadow: 0 0 20px #00d4ff;
+    background-color: #b74b4b;
+    color: white;
+    box-shadow: 0 0 20px #b74b4b;
     transform: scale(1.1);
 }
 
@@ -172,15 +187,15 @@ h1 {
     }
 }
 
-/* Common Section Styling */
+/* Common Section Styling (Education, Experience, Skills, Projects, Contact) */
 section {
     padding: 4rem 10%;
-    margin-top: 6rem;
-    background-color: #1c1c1c;
-    color: #f0f0f0;
+    margin-top: 6rem; /* Adds spacing after the header */
+    background-color: #f1faee; /* Light background */
+    color: #1d3557; /* Dark text */
     border-radius: 12px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-    animation: fadeInUp 2s ease-out;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 2s ease-out; /* Apply animation */
 }
 
 /* Keyframes for fadeInUp */
@@ -197,15 +212,32 @@ section {
 
 /* Hire Me Section */
 .hire-me {
-    background-color: #ff6f61; /* Soft red */
+    background-color: #e63946;
     padding: 5rem 10%;
     color: white;
     text-align: center;
     border-radius: 12px;
     margin: 3rem 0;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
     position: relative;
-    animation: fadeInLeft 2s ease-out;
+    animation: fadeInLeft 2s ease-out; /* Apply animation */
+}
+
+/* Keyframes for fadeInLeft */
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.hire-container {
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .hire-title {
@@ -219,9 +251,18 @@ section {
     font-size: clamp(1.2rem, 2.5vw, 1.8rem);
     margin-bottom: 2rem;
     color: #f1f1f1;
+    line-height: 1.6;
 }
 
-/* Buttons */
+/* Buttons Container */
+.hire-btns {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+/* General Button Styling */
 .btn {
     display: inline-block;
     padding: clamp(1rem, 2vw, 1.5rem) clamp(2rem, 4vw, 3rem);
@@ -234,16 +275,24 @@ section {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* View My Work Button */
 .view-work-btn {
-    background-color: #121212;
-    color: #00d4ff;
+    background-color: white;
+    color: #e63946;
 }
 
 .view-work-btn:hover {
-    background-color: #00d4ff;
-    color: #121212;
+    background-color: #e63946;
+    color: white;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
 }
 
+.view-work-btn:active {
+    transform: scale(0.98);
+}
+
+/* Hire Me Button */
 .hire-me-btn {
     background-color: #f1faee;
     color: #1d3557;
@@ -252,30 +301,68 @@ section {
 .hire-me-btn:hover {
     background-color: #1d3557;
     color: white;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-    .home {
-        flex-direction: column;
-        text-align: center;
-    }
+.hire-me-btn:active {
+    transform: scale(0.98);
+}
 
-    .home-img img {
-        width: 70%;
-        margin-bottom: 2rem;
-    }
+/* Footer Section */
+footer {
+    background-color: #1d3557;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    animation: fadeIn 2s ease-out; /* Apply animation */
+}
 
-    .social-icons a {
-        width: 3rem;
-        height: 3rem;
-    }
+footer p {
+    font-size: 1.4rem;
+    color: white;
+}
 
-    .hire-me {
-        padding: 3rem 5%;
-    }
+/* Contact Form */
+.contact-form {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 3rem;
+    background-color: #f1faee;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    animation: fadeInUp 2s ease-out; /* Apply animation */
+}
 
-    section {
-        padding: 3rem 5%;
-    }
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 1.2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    border: 2px solid #e63946;
+    font-size: 1.4rem;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: #b74b4b;
+}
+
+.contact-form button {
+    background-color: #e63946;
+    color: white;
+    font-size: 1.6rem;
+    padding: 1rem 3rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #b74b4b;
+}
+
+.contact-form button:active {
+    transform: scale(0.98);
 }
