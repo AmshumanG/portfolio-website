@@ -36,6 +36,7 @@ header {
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
+    animation: fadeInDown 1s ease-out;
 }
 
 .logo {
@@ -53,11 +54,22 @@ nav a {
     font-size: clamp(1.2rem, 2.5vw, 1.8rem);
     color: white;
     transition: 0.3s ease;
+    animation: fadeIn 1s ease-out;
 }
 
 nav a:hover {
     color: #b74b4b;
     font-weight: bold;
+}
+
+/* Header Link Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 /* All h1 elements */
@@ -103,6 +115,7 @@ h1 {
     justify-content: center;
     gap: 4rem;
     margin-top: 12rem; /* Increased to avoid overlap with the header */
+    animation: fadeIn 2s ease-out; /* Apply animation */
 }
 
 .home-content h1 {
@@ -120,6 +133,19 @@ h1 {
     width: clamp(40%, 60vw, 70%);
     border-radius: 50%;
     box-shadow: 0 0 20px #b74b4b;
+    animation: rotateIn 2s ease-out; /* Apply rotation animation */
+}
+
+/* Keyframes for rotateIn animation */
+@keyframes rotateIn {
+    0% {
+        opacity: 0;
+        transform: rotate(-360deg);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(0);
+    }
 }
 
 /* Social Media Icons */
@@ -140,6 +166,7 @@ h1 {
     font-size: clamp(1.4rem, 2.5vw, 2rem);
     border-radius: 50%;
     transition: 0.3s ease;
+    animation: bounce 2s infinite; /* Add bounce animation */
 }
 
 .social-icons a:hover {
@@ -147,6 +174,20 @@ h1 {
     color: white;
     box-shadow: 0 0 20px #b74b4b;
     transform: scale(1.1);
+}
+
+.social-icons a:active {
+    transform: scale(0.9);
+}
+
+/* Keyframes for bounce animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 /* Common Section Styling (Education, Experience, Skills, Projects, Contact) */
@@ -157,6 +198,19 @@ section {
     color: #1d3557; /* Dark text */
     border-radius: 12px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 2s ease-out; /* Apply animation */
+}
+
+/* Keyframes for fadeInUp */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Hire Me Section */
@@ -169,6 +223,19 @@ section {
     margin: 3rem 0;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
     position: relative;
+    animation: fadeInLeft 2s ease-out; /* Apply animation */
+}
+
+/* Keyframes for fadeInLeft */
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .hire-container {
@@ -247,36 +314,43 @@ section {
 
 /* Want to Work Together Section */
 .want-to-work {
-    background-color: #f1faee;
-    padding: 5rem 10%;
-    color: #1d3557;
+    margin-top: 10rem;
     text-align: center;
-    border-radius: 12px;
-    margin: 3rem 0;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-}
-
-.want-to-work h2 {
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    margin-bottom: 1.5rem;
+    animation: fadeInUp 2s ease-out; /* Apply animation */
 }
 
 .want-to-work p {
-    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
     margin-bottom: 2rem;
 }
 
-/* Contact Section */
-.contact {
-    background-color: #f1faee; /* Light background */
-    padding: 6rem 10%;
+/* Footer */
+footer {
     text-align: center;
-    color: #1d3557; /* Dark text */
-    border-radius: 12px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    margin: 3rem 0;
+    padding: 3rem;
+    background-color: #1d3557;
+    color: white;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
 }
 
-.contact h1 {
-    font-size: clamp(2rem, 5vw, 3.5rem);
+footer a {
+    color: #b74b4b;
+    transition: 0.3s ease;
+}
+
+footer a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Keyframes for smooth fadeIn animations */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
