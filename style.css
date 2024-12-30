@@ -35,7 +35,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh; /* Ensures content is centered vertically */
+    min-height: 100vh;
     text-align: center;
     animation: fadeSlideIn 2s ease-out; /* Apply animation */
 }
@@ -58,7 +58,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+    background-color: rgba(0, 0, 0, 0.8);
     padding: 1rem 5%;
     display: flex;
     justify-content: space-between;
@@ -100,41 +100,16 @@ nav a:hover {
     }
 }
 
-/* All h1 elements */
-h1 {
-    color: #b74b4b; /* Set color to match the logo */
-    font-size: clamp(2rem, 5vw, 3.5rem);
-}
-
 /* Index Page Styling */
 .index-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh; /* Ensures content is centered vertically */
+    min-height: 100vh;
     text-align: center;
-    animation: fadeSlideIn 2s ease-out; /* Apply animation */
-    margin-top: 10rem; /* Push content down */
-}
-
-/* Keyframes for animation */
-@keyframes fadeSlideIn {
-    0% {
-        opacity: 0;
-        transform: translateY(-50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Add some spacing for child elements if needed */
-.index-content h1,
-.index-content p,
-.index-content a {
-    margin-bottom: 1.5rem; /* Adjust spacing between elements */
+    animation: fadeSlideIn 2s ease-out;
+    margin-top: 10rem;
 }
 
 /* Home Section */
@@ -143,8 +118,8 @@ h1 {
     align-items: center;
     justify-content: center;
     gap: 4rem;
-    margin-top: 12rem; /* Increased to avoid overlap with the header */
-    animation: fadeIn 2s ease-out; /* Apply animation */
+    margin-top: 12rem;
+    animation: fadeIn 2s ease-out;
     text-align: center;
 }
 
@@ -159,12 +134,10 @@ h1 {
     margin-bottom: 1.5rem;
 }
 
-/* Removed rotation effect from home image */
 .home-img img {
     width: clamp(40%, 60vw, 70%);
     border-radius: 50%;
     box-shadow: 0 0 20px #b74b4b;
-    animation: none; /* Remove rotation animation */
 }
 
 /* Social Media Icons */
@@ -172,7 +145,7 @@ h1 {
     display: flex;
     gap: 1.5rem;
     margin-top: 2rem;
-    justify-content: center; /* Center social icons */
+    justify-content: center;
 }
 
 .social-icons a {
@@ -186,7 +159,7 @@ h1 {
     font-size: clamp(1.4rem, 2.5vw, 2rem);
     border-radius: 50%;
     transition: 0.3s ease;
-    animation: bounce 2s infinite; /* Add bounce animation */
+    animation: bounce 2s infinite;
 }
 
 .social-icons a:hover {
@@ -194,10 +167,6 @@ h1 {
     color: white;
     box-shadow: 0 0 20px #b74b4b;
     transform: scale(1.1);
-}
-
-.social-icons a:active {
-    transform: scale(0.9);
 }
 
 /* Keyframes for bounce animation */
@@ -210,82 +179,7 @@ h1 {
     }
 }
 
-/* Common Section Styling (Education, Experience, Skills, Projects, Contact) */
-section {
-    padding: 4rem 10%;
-    margin-top: 6rem; /* Adds spacing after the header */
-    background-color: #f1faee; /* Light background */
-    color: #1d3557; /* Dark text */
-    border-radius: 12px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    animation: fadeInUp 2s ease-out; /* Apply animation */
-}
-
-/* Keyframes for fadeInUp */
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Hire Me Section */
-.hire-me {
-    background-color: #e63946;
-    padding: 5rem 10%;
-    color: white;
-    text-align: center;
-    border-radius: 12px;
-    margin: 3rem 0;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    position: relative;
-    animation: fadeInLeft 2s ease-out; /* Apply animation */
-}
-
-/* Keyframes for fadeInLeft */
-@keyframes fadeInLeft {
-    0% {
-        opacity: 0;
-        transform: translateX(-20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-.hire-container {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.hire-title {
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    color: white;
-}
-
-.hire-text {
-    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-    margin-bottom: 2rem;
-    color: #f1f1f1;
-    line-height: 1.6;
-}
-
-/* Buttons Container */
-.hire-btns {
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-    margin-top: 2rem;
-}
-
-/* General Button Styling */
+/* Common Button Styling */
 .btn {
     display: inline-block;
     padding: clamp(1rem, 2vw, 1.5rem) clamp(2rem, 4vw, 3rem);
@@ -320,47 +214,50 @@ section {
     transform: translateY(-5px);
 }
 
-/* Mobile and Tablet Adjustments */
+/* Section Styling */
+section {
+    padding: 4rem 10%;
+    margin-top: 6rem;
+    background-color: #f1faee;
+    color: #1d3557;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 2s ease-out;
+}
+
+/* Hire Me Section */
+.hire-me {
+    background-color: #e63946;
+    padding: 5rem 10%;
+    color: white;
+    text-align: center;
+    border-radius: 12px;
+    margin: 3rem 0;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeInLeft 2s ease-out;
+}
+
+.hire-btns {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+/* Mobile Adjustments */
 @media screen and (max-width: 768px) {
     header {
         padding: 1rem 3%;
     }
     .home {
         flex-direction: column;
-        gap: 2rem;
-    }
-    .home-img img {
-        width: 80%;
-        margin-top: 2rem;
-    }
-    .index-content h1 {
-        font-size: clamp(2.5rem, 5vw, 3.2rem);
-    }
-    .home-content h1 {
-        font-size: clamp(2.5rem, 5vw, 3.2rem);
-    }
-    .social-icons a {
-        width: 4rem;
-        height: 4rem;
-        font-size: clamp(1.4rem, 2.5vw, 2rem);
-    }
-    .hire-container {
-        width: 100%;
-        padding: 2rem 5%;
     }
 }
 
-/* Extra Small Mobile Adjustments */
 @media screen and (max-width: 480px) {
     .social-icons a {
         width: 3rem;
         height: 3rem;
-        font-size: clamp(1.2rem, 2.5vw, 1.5rem);
-    }
-    .hire-title {
-        font-size: clamp(1.8rem, 5vw, 2.5rem);
-    }
-    .hire-text {
-        font-size: clamp(1rem, 2.5vw, 1.5rem);
+        font-size: 1.5rem;
     }
 }
