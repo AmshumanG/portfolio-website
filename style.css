@@ -77,9 +77,17 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Center content vertically */
+    height: 100vh; /* Full height of the viewport */
     text-align: center;
+    margin-top: 70px; /* To avoid overlap with the fixed header */
     animation: fadeSlideIn 2s ease-out;
+}
+
+.welcome-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .welcome-content h1 {
