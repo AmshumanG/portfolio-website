@@ -87,6 +87,7 @@ h1 {
     min-height: 100vh; /* Ensures content is centered vertically */
     text-align: center;
     animation: fadeSlideIn 2s ease-out; /* Apply animation */
+    margin-top: 10rem; /* Push content down */
 }
 
 /* Keyframes for animation */
@@ -301,45 +302,36 @@ section {
     transform: scale(0.98);
 }
 
-/* Want to Work Together Section */
-.work-together {
-    margin-top: 5rem;
-    padding: 4rem 10%;
-    background-color: #1d3557;
-    color: white;
-    text-align: center;
-    border-radius: 12px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    animation: fadeInRight 2s ease-out;
-}
-
-/* Keyframes for fadeInRight */
-@keyframes fadeInRight {
-    0% {
-        opacity: 0;
-        transform: translateX(20px);
+/* Media Queries */
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+        text-align: center;
     }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
+
+    .home-content h1 {
+        font-size: clamp(2rem, 4vw, 2.5rem);
+    }
+
+    .home-img img {
+        width: 70%;
+        margin-bottom: 2rem;
+    }
+
+    .social-icons a {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .hire-me {
+        padding: 3rem 5%;
+    }
+
+    section {
+        padding: 3rem 5%;
     }
 }
 
-/* Footer Section */
-footer {
-    background-color: #1d3557;
-    color: white;
-    text-align: center;
-    padding: 3rem 0;
-    margin-top: 5rem;
-    font-size: 1.2rem;
-}
-
-footer a {
-    color: #b74b4b;
-    text-decoration: none;
-    font-weight: bold;
-}
 
 footer a:hover {
     color: white;
