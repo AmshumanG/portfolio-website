@@ -72,6 +72,12 @@ nav a:hover {
     }
 }
 
+/* All h1 elements */
+h1 {
+    color: #b74b4b; /* Set color to match the logo */
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
 /* Index Page Styling */
 .index-content {
     display: flex;
@@ -333,6 +339,10 @@ footer a {
     color: #b74b4b;
     text-decoration: none;
     font-weight: bold;
+}
+
+footer a:hover {
+    color: white;
 }
 
 footer a:hover {
