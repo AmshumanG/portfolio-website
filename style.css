@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Times+New+Roman&display=swap');
 
 /* Global Reset and Basic Styling */
 * {
@@ -8,7 +8,7 @@
     text-decoration: none;
     border: none;
     outline: none;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Times New Roman', serif; /* Updated to Times New Roman */
 }
 
 html {
@@ -95,7 +95,6 @@ nav a:hover {
     }
 }
 
-/* Add some spacing for child elements if needed */
 .index-content h1,
 .index-content p,
 .index-content a {
@@ -305,6 +304,16 @@ section {
     border-radius: 12px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
     animation: fadeInRight 2s ease-out;
+}
+
+.work-together h2 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    margin-bottom: 1rem;
+}
+
+.work-together p {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    margin-bottom: 2rem;
 }
 
 /* Keyframes for fadeInRight */
