@@ -88,6 +88,9 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    height: 100%; /* Ensures the content takes full available height */
+    width: 100%; /* Ensures the content takes full available width */
+    text-align: center;
 }
 
 .welcome-content h1 {
